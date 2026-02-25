@@ -1,0 +1,46 @@
+@use '../abstract' as *;
+
+.elementor-element.listzen-parallax-bg-yes {
+    transition: none;
+    background-attachment: fixed !important;
+}
+
+.listzen-border {
+    border-bottom: 1px solid $gray_color;
+    position: relative;
+
+    &:before, &:after {
+        content: "";
+        width: 5px;
+        height: 5px;
+        background: $gray_color;
+        display: block;
+        position: absolute;
+        bottom: -3px;
+        transform: rotate(45deg);
+    }
+
+    &:before {
+        left: 0;
+    }
+
+    &:after {
+        right: 0;
+    }
+}
+
+.elementor-widget-heading {
+    &.custom-listzen-style {
+        padding-bottom: 15px;
+        position: relative;
+
+        &:before {
+            content: "";
+            width: var(--heading-bar-width, 40px);
+            height: var(--heading-bar-height, 5px);
+            background: var(--heading-bar-color, $primary_color);
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}

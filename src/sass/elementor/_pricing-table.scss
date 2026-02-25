@@ -1,0 +1,163 @@
+@use '../abstract' as *;
+
+.rtcl-el-pricing-box {
+    &.rtcl-el-pricing-box-view-4 {
+        padding: 40px 50px 50px;
+        text-align: left;
+
+        .pricing-header {
+            text-align: left;
+            border-bottom: 1px solid $gray_color;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 15px;
+
+            .header-left-content {
+                flex: 1;
+                padding-right: 20px;
+                flex-wrap: wrap;
+            }
+
+            &::before, &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                width: 5px;
+                height: 5px;
+                margin-bottom: -3px;
+                background: $gray_color;
+                transform: rotate(45deg);
+            }
+
+            &::before {
+                left: 0;
+            }
+
+            &:after {
+                right: 0;
+            }
+        }
+
+        .rtcl-el-pricing-title {
+            font-size: 22px;
+            color: $title_color;
+            margin-bottom: 0;
+        }
+
+        .rtcl-el-pricing-sub-title {
+            font-size: 15px;
+        }
+
+        .pricing-content-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: flex-end;
+
+            .pricing-body {
+                flex: 1;
+            }
+        }
+
+        .rtcl-el-pricing-features {
+            ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                margin-bottom: 0;
+
+                li {
+                    line-height: 1.4;
+                }
+            }
+        }
+
+        .rtcl-el-pricing-button {
+            a {
+                font-size: 14px;
+                line-height: 1.5;
+                font-weight: 500;
+                border-radius: var($btn_radius);
+                padding: 15px 20px;
+                background-color: $primary_color;
+                color: $white_color;
+                transition: all .3s ease-out;
+                min-width: 140px;
+                text-align: center;
+                cursor: pointer;
+                display: flex;
+                gap: 10px;
+                align-items: center;
+
+                &:hover {
+                    background: $primary_dark;
+                }
+
+                svg {
+                    width: 1em;
+                    height: 1em;
+                    fill: $white_color
+                }
+            }
+        }
+
+        .rtcl-el-pricing-price {
+            .rtcl-el-price {
+                font-size: 30px;
+                color: $title_color;
+                font-weight: bold;
+            }
+
+            .rtcl-el-pricing-duration {
+                font-size: 14px;
+                margin-left: -2px;
+                transform: translateY(-3px);
+                position: relative;
+                display: inline-block;
+            }
+        }
+    }
+
+    &.rtcl-el-pricing-box-view-5 {
+        .pricing-header,
+        .pricing-content-wrap {
+            display: block;
+        }
+        .pricing-body {
+            margin-bottom: 40px;
+        }
+        .rtcl-el-pricing-price {
+            padding-top: 5px;
+            margin-bottom: 30px;
+        }
+        .pricing-badge {
+            position: absolute;
+            top: 20px;
+            right: 10px;
+            border-radius: 7px;
+            transform: rotate(-90deg);
+            color: #FFF;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: 500;
+            padding: 6px 26px 7px 23px;
+            z-index: 1;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(270deg, #FF846A 9.52%, #FA350C 100%);
+                mask: url("data:image/svg+xml,%3Csvg width='105' height='38' viewBox='0 0 105 38' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.35463 3.53142C9.60025 1.34792 11.921 1.17284e-07 14.4348 1.141e-07L97.5303 8.86503e-09C101.396 3.969e-09 104.53 3.13401 104.53 7V31C104.53 34.866 101.396 38 97.5303 38L14.4348 38C11.921 38 9.60025 36.6521 8.35463 34.4686L1.50899 22.4686C0.282605 20.3188 0.282607 17.6812 1.50899 15.5314L8.35463 3.53142Z' fill='black'/%3E%3C/svg%3E%0A");
+                z-index: -1;
+            }
+        }
+    }
+}

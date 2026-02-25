@@ -1,0 +1,545 @@
+@use '../abstract' as *;
+
+@-webkit-keyframes upsdown {
+    0% {
+        transform: translateY(-100px);
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@keyframes upsdown {
+    0% {
+        transform: translateY(-100px);
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes toptobottom {
+    49% {
+        transform: translateY(100%);
+    }
+
+    50% {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes toptobottom {
+    49% {
+        transform: translateY(100%);
+    }
+
+    50% {
+        transform: translateY(-100%);
+    }
+}
+
+@-webkit-keyframes bottomtotop {
+    49% {
+        transform: translateY(-100%);
+    }
+
+    50% {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes bottomtotop {
+    49% {
+        transform: translateY(-100%);
+    }
+
+    50% {
+        transform: translateY(100%);
+    }
+}
+
+@-webkit-keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@-webkit-keyframes toBottomFromTop {
+    49% {
+        transform: translateY(-100%);
+    }
+
+    50% {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes toBottomFromTop {
+    49% {
+        transform: translateY(-100%);
+    }
+
+    50% {
+        transform: translateY(100%);
+    }
+}
+
+@-webkit-keyframes Rtdraw {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: 770;
+    }
+}
+
+@keyframes Rtdraw {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: 770;
+    }
+}
+
+@-webkit-keyframes scale-up-one {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes scale-up-one {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.move {
+    animation: move 3s linear infinite;
+}
+@keyframes move {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.move1 {
+    animation: move1 2s linear infinite;
+}
+
+@keyframes move1 {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+
+    50% {
+        transform: translateY(-10px) translateX(30px);
+    }
+
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+}
+.move2 {
+    animation: move2 2s linear infinite;
+}
+@keyframes move2 {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    50% {
+        transform: translateY(-20px) translateX(10px);
+    }
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+}
+
+@-webkit-keyframes dash-animation {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: 100%;
+    }
+}
+
+@keyframes dash-animation {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: 100%;
+    }
+}
+
+@-webkit-keyframes listzen-circle {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes listzen-circle {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes listzen-scale {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes listzen-scale {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes headShake {
+    0% {
+        transform: translateX(0)
+    }
+
+    6.5% {
+        transform: translateX(-6px) rotateY(-9deg)
+    }
+
+    18.5% {
+        transform: translateX(5px) rotateY(7deg)
+    }
+
+    31.5% {
+        transform: translateX(-3px) rotateY(-5deg)
+    }
+
+    43.5% {
+        transform: translateX(2px) rotateY(3deg)
+    }
+
+    50% {
+        transform: translateX(0)
+    }
+}
+
+@keyframes headShake {
+    0% {
+        transform: translateX(0)
+    }
+
+    6.5% {
+        transform: translateX(-6px) rotateY(-9deg)
+    }
+
+    18.5% {
+        transform: translateX(5px) rotateY(7deg)
+    }
+
+    31.5% {
+        transform: translateX(-3px) rotateY(-5deg)
+    }
+
+    43.5% {
+        transform: translateX(2px) rotateY(3deg)
+    }
+
+    50% {
+        transform: translateX(0)
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible
+    }
+
+    to {
+        transform: translateZ(0)
+    }
+}
+
+.animate__slideInLeft {
+    animation-name: slideInLeft
+}
+
+@keyframes marquee_left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes marquee_right {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes marquee_top {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes marquee_bottom {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.spin {
+    animation: spin 5s linear infinite;
+}
+
+.spin-slow {
+    animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+    to{ transform: rotate(360deg); }
+}
+
+@keyframes showPrice {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes hidePrice {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+}
+
+//Elementor animation overwrite
+
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(.3, .3, .3);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.zoomIn {
+    animation-name: zoomIn;
+}
+
+@keyframes zoomInDown {
+    0% {
+        opacity: 0;
+        transform: scale(0.1) translateY(-1000px);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(0.475) translateY(60px);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    }
+    100% {
+        transform: scale(1) translateY(0);
+    }
+}
+
+
+.zoomInDown {
+    animation-name: zoomInDown;
+}
+
+@keyframes zoomInLeft {
+    0% {
+        opacity: 0;
+        transform: scale(0.1) translateX(-1000px);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(0.475) translateX(48px);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    }
+    100% {
+        transform: scale(1) translateX(0);
+    }
+}
+
+.zoomInLeft {
+    animation-name: zoomInLeft;
+}
+
+@keyframes zoomInRight {
+    0% {
+        opacity: 0;
+        transform: scale(0.1) translateX(1000px);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(0.475) translateX(-48px);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    }
+    100% {
+        transform: scale(1) translateX(0);
+    }
+}
+
+.zoomInRight {
+    animation-name: zoomInRight;
+}
+
+@keyframes zoomInUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.1) translateY(1000px);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(0.475) translateY(-60px);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    }
+    100% {
+        transform: scale(1) translateY(0);
+    }
+}
+
+.zoomInUp {
+    animation-name: zoomInUp;
+}
+
+//Glow animation
+.rt-glow-wrapper {
+    position: relative;
+    overflow: hidden;
+    padding: 1px;
+    background: $gray_color;
+}
+.rt-glow {
+    animation: glow-move 5s linear infinite var(--rt-glow-start, 0s);
+    offset-path: rect(0% auto 100% auto);
+    background: radial-gradient(#F00, $gray_color, transparent);
+    width: var(--rt-glow-size, 100px);
+    height:  var(--rt-glow-size, 100px);
+    --tw-rotate: 45deg;
+    inset: 0;
+    transition: 0.4s;
+    position: absolute;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@keyframes glow-move {
+    0% {
+        offset-distance: 0%;
+    }
+
+    100% {
+        offset-distance: 100%;
+    }
+}

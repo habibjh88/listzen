@@ -1,0 +1,101 @@
+@use '../abstract' as *;
+
+body {
+    font-family: $base_font;
+    font-weight: 500;
+    @include font_size($base_fs);
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $heading_font;
+    margin: 0 0 15px 0;
+    font-weight: 700;
+    color: $title_color;
+}
+
+// Headings
+h1,
+.h1 {
+    @include font_size(36px, 46px);
+}
+
+.entry-wrapper :is(h1, .h1) {
+    @include font_size(34px, 44px);
+}
+
+h2,
+.h2 {
+    @include font_size(32px, 42px);
+}
+
+.entry-wrapper :is(h2, .h2) {
+    @include font_size(30px, 40px);
+}
+
+h3,
+.h3 {
+    @include font_size(28px, 36px);
+}
+
+h4,
+.h4 {
+    @include font_size(24px, 34px);
+}
+
+h5,
+.h5 {
+    @include font_size(20px, 30px);
+}
+
+h6,
+.h6 {
+    @include font_size(17px, 27px);
+}
+
+small,
+.small {
+    @include font_size(15px);
+}
+
+// alignments
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+// Modifiers
+.text-bold {
+    font-weight: 700;
+}
+
+.text-semibold {
+    font-weight: 600;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.no-line-height {
+    line-height: 1em !important;
+}
+
+.fw-100 { font-weight: 100; }
+.fw-200 { font-weight: 200; }
+.fw-300 { font-weight: 300; }
+.fw-400 { font-weight: 400; }
+.fw-500 { font-weight: 500; }
+.fw-600 { font-weight: 600; }
+.fw-700 { font-weight: 700; }
+.fw-800 { font-weight: 800; }
+.fw-900 { font-weight: 900; }

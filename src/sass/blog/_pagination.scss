@@ -1,0 +1,47 @@
+@use '../abstract' as *;
+.pagination-list {
+	list-style: none;
+	margin: 50px 0 0;
+	padding: 0;
+	display: flex;
+	gap: 5px;
+
+	li {
+		i {
+			font-size: 24px;
+			display:flex;
+		}
+
+		&.active {
+			a {
+				background-color: $primary_color;
+				color: $white_color;
+			}
+		}
+	}
+	a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 40px;
+		width: 40px;
+		font-size: 18px;
+		font-weight: 500;
+		color: $primary_color;
+		background-color: $primary_soft;
+		border-radius: var($btn_radius);
+		&:hover {
+			background-color: $primary_color;
+			color: $white_color;
+		}
+	}
+}
+.pagination-area-2 {
+	.pagination-list {
+		li {
+			a {
+				border-radius: var($btn_radius);
+			}
+		}
+	}
+}

@@ -1,0 +1,101 @@
+@use '../abstract' as *;
+/* Transparent Header
+***************************/
+
+.has-trheader {
+	#listzen-sticky-placeholder {
+		height: 0 !important;
+	}
+	.listzen-breadcrumb-wrapper *,
+	.listzen-breadcrumb-wrapper .breadcrumb-area *,
+	.site-header .site-branding a,
+	.site-header .listzen-navigation a,
+	.site-header .menu-icon-wrapper .listzen-hamburger,
+	.site-header .menu-icon-wrapper li:not(.listzen-button) a,
+	.site-header .listzen-navigation ul li a {
+		color: $transparent_menu_color !important;
+	}
+
+	.site-header .menu-icon-wrapper li:not(.listzen-button) a:hover,
+	.site-header .menu-icon-wrapper a:hover .rt-icon-search,
+	.site-header .site-branding a:hover,
+	.site-header .menu-icon-wrapper .listzen-hamburger:hover,
+	.site-header .listzen-navigation a:hover {
+		color: $transparent_menu_hover !important;
+	}
+
+	&.has-menu-shadow.no-banner .site-header::before,
+	&.has-menu-shadow.has-banner .listzen-breadcrumb-wrapper::after {
+		content: "";
+		background: rgba(0, 0, 0, 0);
+		background: -webkit-linear-gradient(top, rgb(0 0 0 / 58%) 0%, rgba(0, 0, 0, 0) 100%);
+		background: linear-gradient(to bottom, rgb(0 0 0 / 68%) 0%, rgba(0, 0, 0, 0) 100%);
+		top: 0;
+		position: absolute;
+		width: 100%;
+		height: 268px;
+		z-index: -1;
+		pointer-events: none;
+	}
+
+	.site-header {
+		position: absolute;
+		width: 100%;
+		z-index: 999;
+		color: $white_color;
+		background: transparent;
+
+		.main-header-section:not(.listzen-sticky .main-header-section) {
+			background: none;
+		}
+
+		.listzen-navigation ul li.current-menu-item > a,
+		.listzen-navigation ul li.current-menu-ancestor > a {
+			color: $transparent_menu_hover !important;
+		}
+
+		.listzen-navigation ul.listzen-navbar > li > a .menu-label:after {
+			background: $transparent_menu_hover !important;
+		}
+		.listzen-navigation ul li a i {
+			opacity: 0.7;
+		}
+
+		.listzen-navigation ul li.mega-menu > ul.dropdown-menu,
+		.listzen-navigation ul > li ul.dropdown-menu,
+		.listzen-navigation ul > li > ul {
+			background-color: rgb(17 17 17 / 92%);
+			backdrop-filter: blur(10px);
+		}
+		.listzen-navigation ul li.mega-menu > ul.dropdown-menu ul {
+			background: none !important;
+		}
+
+		.listzen-navigation ul > li > ul li > a:hover {
+			background-color: transparent;
+			color: $primary_light;
+		}
+
+		.menu-icon-wrapper i {
+			color: currentColor;
+		}
+
+		.menu-icon-wrapper .has-hamburger i {
+			color: currentColor;
+		}
+
+		.menu-icon-wrapper .has-separator li::after {
+			background: $transparent_menu_color;
+			opacity: .5;
+		}
+	}
+
+	.listzen-sticky .main-header-section {
+		background: rgba($title_rgb, 0.94);
+	}
+}
+
+
+.listzen-sticky ~ .site-content .listzen-breadcrumb-wrapper > * {
+	z-index: 10;
+}

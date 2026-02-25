@@ -1,0 +1,80 @@
+@use '../abstract' as *;
+
+.listzen-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    color: #212121;
+
+    .rtcl-field-label {
+        font-size: 15px;
+    }
+
+    .rtcl-login-form-submit-wrap {
+        margin-bottom: 10px;
+    }
+
+    .rtcl-forgot-password {
+        margin-bottom: 0;
+
+        > span {
+            transform: scaleY(0.8);
+        }
+    }
+
+    .listzen-popup-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .listzen-popup-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        padding: 30px;
+        border-radius: var($site_radius);
+        width: 420px;
+        max-width: 90%;
+    }
+
+    .listzen-popup-close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        cursor: pointer;
+        font-size: 25px;
+    }
+
+    .rtcl-login-form-submit-wrap {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .rtcl-form-group:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .rtcl .rtcl-field-label {
+        margin-bottom: 5px;
+    }
+
+    .form-check {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .rtcl-forgot-password {
+        font-weight: normal;
+    }
+}

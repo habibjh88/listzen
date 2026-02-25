@@ -1,0 +1,64 @@
+@use '../abstract' as *;
+
+//site wide css
+.primary-color {
+    color: $primary_color;
+}
+
+.secondary-color {
+    color: $secondary_color;
+}
+
+.bg-primary {
+    background-color: $primary_color;
+}
+
+.bg-secondery {
+    background-color: $secondary_color;
+}
+
+.site-radius {
+    border-radius: var($site_radius);
+}
+
+.btn-radius {
+    border-radius: var($btn_radius);
+}
+
+.pointer-events-none {
+    pointer-events: none;
+}
+
+.height-100 {
+    height: 100% !important;
+}
+
+.center-center {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+}
+
+@media (max-width: 767px) {
+    .mobile-hide {
+        display: none;
+    }
+}
+
+@media (min-width: 1400px) {
+    .listzen-negative-150 .rtcl-listings-slider-container {
+        margin-left: -150px;
+        margin-right: -150px;
+    }
+    .listzen-negative-200 .rtcl-listings-slider-container {
+        margin-left: -200px;
+        margin-right: -200px;
+    }
+    .listzen-negative-300 .rtcl-listings-slider-container {
+        margin-left: -300px;
+        margin-right: -300px;
+    }
+}
+
+

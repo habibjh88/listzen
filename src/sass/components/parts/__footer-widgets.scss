@@ -1,0 +1,78 @@
+@use '../../abstract' as *;
+/* Footer Widget wrapper
+***************************/
+.site-footer {
+	overflow: hidden;
+	z-index: 2;
+}
+.footer-widgets-wrapper {
+	padding-top: 100px;
+	padding-bottom: 50px;
+	font-size: 15px;
+
+	//Default widgets overwrite
+	.footer-widgets {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+
+		.widget-title, .widgettitle {
+			font-size: 20px;
+			margin-bottom: 20px;
+		}
+
+		.widget-title {
+			color: #FFFFFF;
+		}
+
+		> .widget {
+			flex-grow: 25;
+		}
+
+		.wp-calendar-table caption {
+			background: #e7e7e7;
+			color:$title_color;
+		}
+
+		.widget {
+			a {
+				color: currentColor;
+				&:hover {
+					color: $white_color !important;
+				}
+			}
+			select {
+				background-color: #e7e7e7;
+			}
+			table {
+				margin-top: 0;
+				margin-bottom: 5px;
+			}
+		}
+	}
+}
+.site-footer {
+	.footer-social {
+		display: flex;
+		align-items: center;
+		column-gap: 10px;
+		a {
+			height: 38px;
+			width: 38px;
+			border-radius: 38px;
+			background-color: $footer_border_color;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			transition: all 0.4s ease-in-out;
+			overflow: hidden;
+			&:hover {
+				background-color: $primary_color;
+				i {
+					color: $button_color;
+					animation: toBottomFromTop 0.7s forwards;
+				}
+			}
+		}
+	}
+}

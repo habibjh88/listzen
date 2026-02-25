@@ -1,0 +1,33 @@
+{
+  "name": "radiustheme/listzen",
+  "description": "RadiusTheme WordPress Starter Theme for developers",
+  "keywords": [
+    "WordPress",
+    "Theme",
+    "Starter"
+  ],
+  "homepage": "https://github.com/RadiusTheme",
+  "license": "GPL-3.0",
+  "version": "4.0.0",
+  "authors": [
+    {
+      "name": "RadiusTheme",
+      "email": "support@radiustheme.com",
+      "homepage": "https://radiustheme.com",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Listzen\\": "./inc"
+    },
+    "files": [
+      "./inc/template-tags.php"
+    ]
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": false
+    }
+  }
+}

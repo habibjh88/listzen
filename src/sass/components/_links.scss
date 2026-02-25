@@ -1,0 +1,11 @@
+@use '../abstract' as *;
+a {
+	@include transition_default();
+
+	&,
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		outline: 0;
+	}
+}

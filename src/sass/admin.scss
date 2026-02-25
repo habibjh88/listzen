@@ -1,0 +1,13 @@
+/*--------------------------------------------------------------
+# Add all your styles for the Admin area
+--------------------------------------------------------------*/
+@forward "./fonts/fonts";
+
+.rtcl-has-group-title {
+    .rtcl-fb-repeater-item-fields .rtcl-fb-field:not(:nth-child(1), :nth-child(2)) {
+        display: none;
+    }
+
+    background: #ebebf1 !important;
+    border-color: #a9a8af !important;
+}

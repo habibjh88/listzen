@@ -1,0 +1,33 @@
+.listzen-page-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    .page-item {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+    }
+    .elementor-icon {
+        font-size: 1em;
+    }
+
+    .icon-show-on-hover & {
+        .page-item {
+            overflow: hidden;
+            transition: 0.4s;
+            &:not(:hover) {
+                gap: 0 !important;
+            }
+            &:hover {
+                .elementor-icon {
+                    margin-left: 0 !important;
+                    transform: scale(1);
+                }
+            }
+        }
+        .elementor-icon {
+            transform: scale(0);
+            margin-left: -10px;
+        }
+    }
+}

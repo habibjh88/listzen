@@ -1,0 +1,130 @@
+@use '../../abstract' as *;
+//Footer Style 3
+.listzen-footer-3 .site-footer {
+
+	background: #00081B;
+
+	.footer-widgets-wrapper {
+		background-color: $footer_bg_color;
+
+		.widget-title {
+			color: $meta_light;
+		}
+	}
+
+	.listzen-navigation ul > li:hover > ul {
+		z-index: 999;
+	}
+
+	.footer-copyright-wrapper {
+		border-top: 1px solid $footer_border_color;
+
+		i {
+			color: $meta_light;
+		}
+	}
+
+	.footer-top-wrapper {
+
+		.tooter-top-inner {
+			border-bottom: 1px solid $meta_color;
+			padding: 40px 0 50px;
+		}
+	}
+
+	.footer-shape {
+		ul {
+			li {
+				width: 431px;
+				height: 431px;
+				border-radius: 431px;
+				background: #141C35;
+				filter: blur(100px);
+				position: absolute;
+
+				&:nth-child(1) {
+					bottom: -42%;
+					left: 0;
+				}
+
+				&:nth-child(2) {
+					top: -20%;
+					left: -3%;
+					background-color: #05112d;
+					transform: scale(1.5);
+				}
+
+				&:nth-child(3) {
+					top: -35%;
+					right: -10%;
+					background-color: #141C35;
+				}
+
+				&:nth-child(4) {
+					bottom: -40%;
+					right: 5%;
+					background-color: #130B31;
+				}
+			}
+		}
+	}
+
+
+	.footer-promo-title {
+		background: linear-gradient(90deg, #FFF -2.1%, #8B7AF5 53.56%, #FFF 83.46%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-size: 40px;
+		font-weight: 700;
+		line-height: 48px;
+		animation: gradient 5s ease infinite;
+		background-size: 300% 100%;
+	}
+
+	.listzen-button .btn {
+		gap: 10px;
+
+		i {
+			color: currentColor;
+		}
+
+		&:hover {
+			background: $primary_dark;
+		}
+	}
+
+
+	.listzen-footer-shape {
+		position: absolute;
+		right: 50px;
+		top: 50px;
+		color: $meta_color;
+
+		svg {
+			width: 140px;
+			height: 140px;
+			opacity: .5
+		}
+	}
+
+	.listzen-footer-star-shape {
+		position: absolute;
+		bottom: -14px;
+		left: 50%;
+		margin-left: -25px;
+
+		[class*=listzen-icon] {
+			font-size: 50px;
+			color: $meta_color;
+		}
+	}
+
+	.copyright-text-wrap, .listzen-footer-cta {
+		@media (max-width: 991px) {
+			flex-direction: column;
+			gap: 15px;
+			text-align: center;
+		}
+	}
+}

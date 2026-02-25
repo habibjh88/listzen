@@ -1,0 +1,51 @@
+@use '../../abstract' as *;
+//Style 4
+
+.single.listzen-single-4 {
+	.content-area {
+		padding-top: 0;
+	}
+
+	.single-post-container {
+		.listzen-widget-area {
+			display: none !important;
+		}
+
+		.content-row {
+			position: relative;
+			justify-content: center;
+			margin-top: -170px;
+			z-index: 90;
+		}
+
+		.content-col {
+			max-width: 86% !important;
+			flex: 0 0 86% !important;
+			background-color: $body_bg_color;
+			padding: 30px;
+			border-radius: var($site_radius);
+			box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+			@media (min-width: 992px) {
+				padding: 56px 60px;
+			}
+		}
+
+		.content-top-area {
+			padding: 0;
+
+			.post-thumbnail {
+				position: relative;
+				overflow: hidden;
+
+				&, img {
+					border-radius: 0;
+				}
+
+				@media(min-width: 992px) {
+					height: 600px;
+				}
+			}
+		}
+
+	}
+}

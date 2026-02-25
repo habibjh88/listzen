@@ -1,0 +1,24 @@
+@use '../abstract' as *;
+.error-404 {
+	@include flex_center(column);
+	img {
+		max-width: 700px;
+		height: auto;
+	}
+
+	.error-info {
+		@include flex_center(column);
+		gap: 10px;
+		padding-top: 40px;
+		.error-title {
+			font-size: 40px;
+			margin-bottom: 15px;
+		}
+	}
+
+	.btn-404 {
+		min-height: 50px;
+		background: $body_color;
+		font-size: 15px;
+	}
+}

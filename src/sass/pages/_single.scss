@@ -1,0 +1,95 @@
+@use '../abstract' as *;
+@forward "parts/_single-style";
+@forward "parts/_single-style-3";
+@forward "parts/_single-style-4";
+@forward "parts/_thumbnail-pagination";
+
+.single-content {
+    .listzen-post-card {
+        .entry-content {
+
+            > p + :is(h1, h2, h3) {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+        }
+
+        .post-separate-meta {
+            margin-bottom: 15px;
+        }
+    }
+
+    .single-inner-wrapper {
+        display: inline-block;
+        width: 100%;
+    }
+}
+
+.post-thumbnail-wrap .wp-caption-text {
+    margin-top: 8px;
+    margin-bottom: 0;
+    font-size: .8rem;
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    line-height: 1.3;
+}
+
+.has-image-radius .entry-content img {
+    border-radius: var($site_radius);
+}
+
+
+// Related post
+.listzen-related-post {
+    margin-top: 60px;
+
+    .related-title {
+        font-size: 30px;
+        margin-bottom: 26px;
+    }
+
+    .blog-post-meta {
+        margin-bottom: 0 !important;
+    }
+}
+
+
+//Single post separate meta compatibility with blog style
+.s-blog-grid-2,
+.s-blog-grid-3 {
+    .entry-footer .tag-links a,
+    .post-separate-meta a,
+    .entry-footer .post-read-more {
+        border-radius: 30px !important;
+        color: $primary_color;
+        border-color: $primary_color;
+        font-size: 13px;
+
+        &:hover {
+            background: $primary_color;
+            color: $white_color;
+        }
+    }
+}
+
+.s-blog-list-2,
+.s-blog-grid-4 {
+    .entry-footer .tag-links a,
+    .post-separate-meta a,
+    .entry-footer .post-read-more {
+        background: $primary_color;
+        color: $white_color;
+        border-color: $primary_color;
+
+        &:hover {
+            background: $primary_light;
+            border-color: $primary_light;
+        }
+    }
+}
+
+.s-blog-grid-2 ~ .comments-area .comment-form input[type=submit],
+.s-blog-grid-3 ~ .comments-area .comment-form input[type=submit] {
+    border-radius: 30px !important;
+}

@@ -1,0 +1,39 @@
+@use '../abstract' as *;
+
+.listing-sidebar .rtcl-listing-side-title,
+.listzen-section-title {
+    position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+
+    &:before {
+        content:"";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 4px;
+        width: var(--listzen-tit-bar-width, 30px);
+        background: var(--listzen-tit-bar-color, $primary_color);
+        border-radius: 30px;
+    }
+    &.aligncenter {
+        text-align: center;
+
+        &:before {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    .main-title {
+        font-weight: bold;
+        color: var(--listzen-sec-tit-color, $title_color);
+        font-size: var(--listzen-tit-fsize, 18px);
+        margin: 0;
+    }
+    .sub-title {
+        margin: 0;
+        color: var(--listzen-sec-subtit-color, $body_color);
+        font-size: var(--listzen-subtit-fsize, $base_fs);
+    }
+}

@@ -1,0 +1,40 @@
+@use '../abstract' as *;
+
+.listzen-search-form .search-box {
+    position: relative;
+    border: 1px solid $border_color;
+    border-radius: var($btn_radius);
+    overflow: hidden;
+
+    input {
+        font-size: $base_fs;
+        height: 46px;
+        padding: 0 55px 0 20px;
+        border: none;
+        width: 100%;
+        border-radius: var($btn_radius);
+        background: $white_color;
+        font-weight: normal;
+    }
+
+    button {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        border: none;
+        color: $meta_color;
+        background: transparent;
+        padding: 0 10px;
+
+        i {
+            color: $primary_color;
+            font-size: 24px;
+            display: flex;
+        }
+
+        .btn-label {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,406 @@
+@use '../abstract' as *;
+
+$rtclLocationIcon: "data:image/svg+xml,%3Csvg width='15' height='18' viewBox='0 0 15 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 7.54545C14 12.6364 7.5 17 7.5 17C7.5 17 1 12.6364 1 7.54545C1 5.80949 1.68482 4.14463 2.90381 2.91712C4.12279 1.68961 5.77609 1 7.5 1C9.22391 1 10.8772 1.68961 12.0962 2.91712C13.3152 4.14463 14 5.80949 14 7.54545Z' stroke='%234B4B4B' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.5 9.72727C8.69662 9.72727 9.66667 8.75044 9.66667 7.54545C9.66667 6.34047 8.69662 5.36364 7.5 5.36364C6.30338 5.36364 5.33333 6.34047 5.33333 7.54545C5.33333 8.75044 6.30338 9.72727 7.5 9.72727Z' stroke='%234B4B4B' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A";
+$rtclTagsIcon: "data:image/svg+xml,%3Csvg width='16' height='17' viewBox='0 0 16 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.5 6.52684L4.5 2.64944M1.21001 4.70401L8.00001 8.47683L14.79 4.70401M8 16V8.46931M15 11.4578V5.48102C14.9997 5.21899 14.9277 4.96165 14.7912 4.7348C14.6547 4.50794 14.4585 4.31956 14.2222 4.18855L8.77778 1.20018C8.5413 1.06904 8.27306 1 8 1C7.72694 1 7.4587 1.06904 7.22222 1.20018L1.77778 4.18855C1.54154 4.31956 1.34532 4.50794 1.2088 4.7348C1.07229 4.96165 1.00028 5.21899 1 5.48102V11.4578C1.00028 11.7198 1.07229 11.9771 1.2088 12.204C1.34532 12.4308 1.54154 12.6192 1.77778 12.7502L7.22222 15.7386C7.4587 15.8697 7.72694 15.9388 8 15.9388C8.27306 15.9388 8.5413 15.8697 8.77778 15.7386L14.2222 12.7502C14.4585 12.6192 14.6547 12.4308 14.7912 12.204C14.9277 11.9771 14.9997 11.7198 15 11.4578Z' stroke='%234B4B4B' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A";
+$rtclSearchIcon: "data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17 17L13.5247 13.5247M15.681 8.3405C15.681 12.3945 12.3945 15.681 8.3405 15.681C4.28645 15.681 1 12.3945 1 8.3405C1 4.28645 4.28645 1 8.3405 1C12.3945 1 15.681 4.28645 15.681 8.3405Z' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A";
+//.rtcl-widget-search-inline
+.rtcl-widget-search-style-popup :is(.rtcl-search-input-category, .rtcl-search-input-location),
+.rtcl-widget-search select {
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L7 7L13 1' stroke='%234B4B4B' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    background-position-y: center;
+    background-position-x: calc(100% - 16px);
+    background-repeat: no-repeat;
+    background-size: 12px;
+    padding-right: 40px !important;
+}
+
+.rtcl-widget-search-style-popup {
+    .rtcl-elementor-widget-search .ws-item.ws-text {
+        order: -5;
+    }
+
+    .rtcl-form-control {
+        padding: 8px 16px;
+
+        &:hover, &:focus {
+            border-color: $primary_color;
+        }
+
+        .rtcl-search-input-category::before,
+        .rtcl-search-input-location::before {
+            margin-right: 3px;
+        }
+    }
+}
+
+.rtcl-widget-search-style-standard {
+    &.rtcl-widget-search-inline {
+        .rtcl-row {
+            background: #FFF;
+            border-radius: var($btn_radius);
+        }
+    }
+
+    &.rtcl-widget-search-vertical {
+        .rtcl-row {
+            .rtcl-form-group:not(.ws-button) {
+                background-color: $white_color;
+                border: 1px solid #E3E3E3 !important;
+                border-radius: var($site_radius);
+            }
+
+            .rtcl-form-group {
+                margin-left: 0;
+                color: $title_color;
+            }
+
+            .rtcl-btn[type=submit] {
+                border-radius: var($site_radius);
+            }
+        }
+    }
+
+    .rtcl-row {
+        overflow: hidden;
+
+        @media (max-width: 767px) {
+            flex-direction: column;
+            background: rgb(255 255 255 / 20%);
+            padding: 30px !important;
+        }
+
+        .rtcl-form-group.ws-button {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+
+        .rtcl-btn[type=submit] {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            &:before {
+                content: "";
+                color: #FFFFFF;
+                width: 18px;
+                height: 18px;
+                mask: url($rtclSearchIcon);
+                mask-repeat: no-repeat;
+                background-color: $white_color;
+                display: block;
+            }
+        }
+
+        .rtcl-form-group {
+
+            margin: 0;
+
+            &:not(:last-child) {
+                border-right: 1px solid $gray_color;
+            }
+
+            @media (max-width: 767px) {
+                &:not(.ws-button) {
+                    border: 1px solid $gray_color !important;
+                }
+            }
+
+            @media (max-width: 767px) {
+                &:not(:last-child) {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    min-width: 100%;
+                    background-color: rgb(255 255 255 / 75%) !important;
+                    border-radius: var($site_radius);
+
+                    &:after {
+                        content: none !important;
+                    }
+
+                    :has(input:focus) {
+                        border-color: red !important;
+                    }
+                }
+
+                &.ws-button {
+                    padding: 0 !important;
+                    margin: 0 !important;
+                    max-width: inherit !important;
+                    border-radius: var($site_radius) !important;
+                    overflow: hidden;
+                }
+            }
+
+            &.ws-category,
+            &.ws-location {
+                background-position-y: center;
+                background-position-x: 20px;
+                background-repeat: no-repeat;
+            }
+
+            &.ws-location {
+                background-image: url($rtclLocationIcon);
+            }
+
+            &.ws-category {
+                background-image: url($rtclTagsIcon);
+            }
+
+            &:has(.keywords-field-wrapper) {
+                order: -1;
+            }
+        }
+
+        .rtcl-form-control {
+            border: none;
+            height: 50px;
+            background-color: transparent !important;
+        }
+
+        .rtcl-btn[type=submit] {
+            //border-radius: 0 !important;
+            height: 50px;
+        }
+
+        .ws-button {
+            margin-left: -9px;
+        }
+
+        .ws-item:not(.ws-text) {
+            padding-left: 34px;
+        }
+
+        .ws-text {
+            padding-left: 22px !important;
+        }
+
+        .keywords-field-wrapper .rtcl-form-control {
+            padding-left: 0;
+        }
+    }
+
+    .rtcl-search-preset-1 & {
+        .rtcl-row {
+            border-radius: 30px;
+            min-height: 65px;
+            padding: 5px;
+
+            .rtcl-btn[type=submit] {
+                border-radius: 30px !important;
+                height: 55px;
+            }
+
+            .ws-button {
+                margin-left: 0 !important;
+            }
+
+            .rtcl-form-group {
+                &:not(:last-child) {
+                    border-right: none;
+                    position: relative;
+
+                    &:after {
+                        content: "";
+                        width: 1px;
+                        height: 21px;
+                        background: var(--listzen-gray);
+                        position: absolute;
+                        display: block;
+                        right: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+
+                &.ws-category:after {
+                    content: none;
+                }
+            }
+
+            .rtcl-form-group {
+
+
+                @media (max-width: 767px) {
+                    &:not(:last-child) {
+                        border-radius: 30px;
+                    }
+
+                    &.ws-button {
+                        border-radius: 30px !important;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+
+    .rtcl-search-preset-2 & {
+        .rtcl-row {
+            background: transparent;
+            gap: 10px;
+
+            .rtcl-form-group {
+                border-radius: var($site_radius);
+            }
+
+            .rtcl-form-group:not(.ws-button) {
+                background-color: $white_color;
+            }
+
+            .ws-item {
+                padding-left: 30px;
+                background-position-x: 14px
+            }
+
+            .ws-button {
+                margin-left: 0;
+                padding-left: 0;
+                overflow: hidden;
+            }
+        }
+    }
+
+    .rtcl-search-preset-3 & {
+        .rtcl-form-group {
+            border: 1px solid $gray_color;
+            border-radius: var($site_radius);
+            overflow: hidden;
+        }
+
+        .rtcl-row {
+            gap: 20px;
+        }
+    }
+}
+
+
+body {
+    .rtcl.rtcl-widget-search {
+        .rtcl-btn[type=submit] {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 10px;
+
+            &::before {
+                content: "";
+                width: 17px;
+                height: 18px;
+                font-size: 16px;
+                background: $title_color;
+                display: flex;
+                mask: url($rtclSearchIcon);
+                mask-position: center;
+                mask-repeat: no-repeat;
+                background: $white_color;
+            }
+        }
+    }
+
+    .rtcl.rtcl-widget-search.rtcl-widget-search-style-standard {
+
+        .rtcl-form-group {
+            &.ws-text {
+                order: -10 !important;
+            }
+        }
+
+        &.rtcl-widget-search-inline {
+            .rtcl-btn[type=submit] {
+                border-radius: 0;
+            }
+        }
+
+        .rtcl-btn[type=submit],
+        .rtcl-search-input-category,
+        .rtcl-search-input-location {
+            &::before {
+                content: "";
+                width: 17px;
+                height: 18px;
+                font-size: 16px;
+                background: $title_color;
+                display: flex;
+                mask: url($rtclSearchIcon);
+                mask-position: center;
+                mask-repeat: no-repeat;
+                background: $white_color;
+            }
+        }
+
+
+        .rtcl-search-input-category {
+            display: flex;
+            align-items: center;
+        }
+
+        .rtcl-search-input-location {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+body .rtcl-ui-modal .rtcl-modal-wrapper .rtcl-modal-content .rtcl-modal-body {
+    padding: 50px;
+}
+
+body .rtcl-ui-modal .rtcl-ui-select-list-wrap .rtcl-ui-select-list ul li {
+    border-top: solid 1px $gray_color;
+}
+
+body .rtcl-ui-modal .rtcl-modal-wrapper .rtcl-modal-content .rtcl-modal-close {
+    right: 20px;
+    top: 20px;
+    box-shadow: none;
+    width: 40px;
+    height: 40px;
+    border-radius: var($site_radius);
+    background: #F00;
+}
+
+body .rtcl-ui-modal .rtcl-ui-select-list-wrap .rtcl-ui-select-list ul li a:hover {
+    color: $primary_color !important;
+}
+
+body .rtcl-elementor-widget-search .rtcl-form-control {
+    display: flex;
+    font-size: 16px;
+}
+
+body .rtcl.rtcl-widget-search .rtcl-search-input-category,
+body .rtcl.rtcl-widget-search .rtcl-search-input-location {
+    &::before {
+        content: "";
+        width: 17px;
+        height: 18px;
+        font-size: 16px;
+        background: $body_color;
+        display: flex;
+        mask-position: center !important;
+        mask-repeat: no-repeat !important
+    }
+}
+
+body .rtcl.rtcl-widget-search .rtcl-search-input-category::before {
+    mask: url($rtclTagsIcon);
+}
+
+body .rtcl.rtcl-widget-search .rtcl-search-input-location::before {
+    mask: url($rtclLocationIcon);
+}
+
+.hide-search-text {
+    .rtcl-elementor-widget-search.rtcl-widget-search-inline .ws-button {
+        max-width: 60px;
+        button {
+            text-indent: -99999px;
+            &:before {
+                position: absolute;
+            }
+        }
+    }
+}

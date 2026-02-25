@@ -1,0 +1,29 @@
+
+.layout-grid-2{
+    .listzen-post-card {
+        .article-inner-wrapper {
+            border: none;
+            gap: 20px;
+        }
+        .entry-wrapper {
+            padding: 0;
+            position: static;
+        }
+
+        .entry-content {
+            margin-top: 4px;
+        }
+
+        &.has-post-thumbnail {
+            .post-separate-meta {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                z-index: 10;
+            }
+        }
+        .entry-content + .blog-post-meta {
+            margin-top: 15px;
+        }
+    }
+}

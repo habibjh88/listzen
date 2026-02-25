@@ -1,0 +1,10 @@
+@forward 'blog/blog';
+@forward "base/default";
+@forward "widgets/widgets";
+@forward "components/sidebar";
+@forward "components/typography";
+@forward "pages/single";
+
+.wp-block-legacy-widget__edit-preview-iframe {
+    height: auto !important;
+}

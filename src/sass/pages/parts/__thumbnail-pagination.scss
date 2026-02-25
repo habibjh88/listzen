@@ -1,0 +1,80 @@
+@use '../../abstract' as *;
+.single-post-pagination {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	position: relative;
+	align-items: flex-start;
+	margin-bottom: 50px;
+	margin-top: 50px;
+
+	p {
+		margin: 0;
+	}
+
+	.post-navigation {
+		display: flex;
+		flex-wrap: wrap;
+		flex: 1 0 50%;
+
+		&.next {
+			justify-content: flex-end;
+		}
+
+		@media (max-width: 767px) {
+			flex: 0 0 100%;
+			&:not(:last-child) {
+				margin-bottom: 15px;
+				padding-bottom: 15px;
+			}
+
+		}
+	}
+
+	.post-thumb {
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background-size: cover;
+		background-position: center;
+		flex: 0 0 50px;
+	}
+	.link {
+		display: flex;
+		flex: 0 0 calc(100% - 50px);
+		align-items: center;
+		gap: 15px;
+		font-size: $base_fs;
+		line-height: 1.4;
+		color: $meta_color;
+
+		&:hover {
+			color: $primary_color;
+		}
+	}
+
+	.nav-title {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		flex: 0 0 100%;
+		font-weight: 600;
+		font-size: 20px;
+		margin-bottom: 15px;
+		color: $title_color;
+		[class*=listzen-icon] {
+			font-size: 22px;
+		}
+		&:hover {
+			color: $primary_color;
+			svg {
+				color: $primary_color;
+			}
+		}
+	}
+
+	.next .nav-title,
+	.next .link {
+		justify-content: flex-end;
+	}
+}

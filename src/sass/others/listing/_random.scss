@@ -1,0 +1,119 @@
+@use '../../abstract/index' as *;
+
+
+.rtcl {
+    .rtcl-container {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .rtcl-content-wrapper {
+        overflow: inherit;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        .content-area {
+            flex: 1;
+        }
+    }
+
+    .rtcl-form-control {
+        border-radius: var($btn_radius);
+    }
+
+    &.rtcl-page {
+        background: #FFFFFF;
+    }
+
+    .rtcl-listings-actions .rtcl-result-count {
+        font-size: 16px;
+        font-weight: normal;
+        color: $body_color;
+        margin: 0;
+        line-height: 1.2;
+        @media (max-width: 599px) {
+            text-align: right;
+            max-width: calc(100% - 119px);
+            font-size: 15px;
+        }
+    }
+
+    .rtcl-listings-actions .rtcl-view-switcher > a {
+        border-radius: var($btn_radius);
+        background-color: $primary_soft;
+        color: $primary_color;
+        border-color: $primary_soft;
+
+        &:hover {
+            background-color: $primary_color;
+            color: $white_color;
+        }
+    }
+
+    .rtcl-listings-actions .rtcl-ordering {
+        position: relative;
+        padding-right: 15px;
+        margin: 0 10px;
+
+        @media (min-width: 600px) {
+            margin-left: auto;
+        }
+
+        &:after {
+            content: "";
+            width: 12px;
+            height: 6px;
+            background: $title_color;
+            mask: url("data:image/svg+xml,%3Csvg width='15' height='9' viewBox='0 0 15 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 1.28247L7.5 7.28247L13.5 1.28247' stroke='%23444444' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+            mask-position: center;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            position: absolute;
+        }
+    }
+
+    .rtcl-listings-actions .rtcl-ordering select {
+        border: none;
+        text-align: right;
+        appearance: none;
+    }
+
+    .rtcl-listings-actions .rtcl-view-switcher {
+        display: flex;
+        column-gap: 10px;
+        flex-direction: row-reverse;
+
+        .v-icon {
+            transform: scale(.9);
+        }
+    }
+}
+
+.rtcl-active-filters-wrap .rtcl-active-filters .rtcl-active-filter .af-name {
+    color: $title_color;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.rtcl-active-filters-wrap {
+    border-radius: var($btn_radius);
+
+    .rtcl-active-filters .rtcl-active-filter .af-items .afi {
+        color: $primary_color;
+        border-color: $primary_soft;
+        background-color: $primary_soft;
+    }
+}
+
+//My Account
+.rtcl-checkout .content-area,
+.rtcl-form-page .content-area, .rtcl-account .site-content,
+.rtcl-account {
+    background: #F8F8F8;
+}
+
+body.rtcl-account:not(.page-template-rtcl-canvas_template) .rtcl-MyAccount-wrap .rtcl-MyAccount-content .rtcl-user-info .rtcl-user-content {
+    flex: 1 0 50%;
+    max-width: 100%;
+}

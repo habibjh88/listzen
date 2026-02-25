@@ -1,0 +1,171 @@
+@use '../abstract' as *;
+
+button {
+	@include transition_default();
+	cursor: pointer;
+}
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 700;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	user-select: none;
+	border-radius: var($btn_radius);
+	letter-spacing: 0.5px;
+	padding: 12px 25px;
+	font-size: 1rem;
+	line-height: 1;
+	@include transition_default();
+
+	&:active {
+		box-shadow: none;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&.btn-xl {
+		$xl_size: calc(1rem + 8px);
+		padding: calc(1rem + 8px) calc(1rem + 16px);
+		@include font_size($xl_size, $xl_size);
+	}
+
+	&.btn-lg {
+		$lg_size: calc(1rem + 2px);
+		padding: calc(1rem + 2px) calc(1rem + 8px);
+		@include font_size($lg_size, $lg_size);
+	}
+
+	&.btn-sm {
+		$lg_size: calc(1rem - 3px);
+		padding: calc(1rem - 4px) calc(1rem + 4px);
+		@include font_size($lg_size, $lg_size);
+	}
+
+	&.btn-xs {
+		$lg_size: calc(1rem - 6px);
+		padding: calc(1rem - 5px) calc(1rem + 2px);
+		@include font_size($lg_size, $lg_size);
+	}
+
+}
+
+//Button style
+.btn-primary {
+	@include button_style($white_color, $primary_color, $secondary_color);
+}
+
+.btn-secondary {
+	@include button_style($white_color, $secondary_color, rgba($secondary_rgb, 0.8));
+}
+
+.btn-light {
+	@include button_style($white_color, $meta_color, $primary_color);
+}
+
+.btn-gray {
+	@include button_style($white_color, $meta_color, $primary_color);
+}
+
+// button 1
+.button-1 {
+	background-color: $primary_color;
+	color: $button_color;
+
+	&:hover {
+		background-color: $secondary_color;
+		color: $button_color;
+	}
+
+	i {
+		font-size: 12px;
+		display: inline-block;
+		margin-left: 10px;
+	}
+}
+
+// button 2
+.listzen-button .button-2 {
+	color: $button_color;
+	background-color: $primary_color;
+	border-radius: 30px;
+
+	.btn-wrap {
+		display: inline-block;
+		overflow: hidden;
+		position: relative;
+		z-index: 1;
+		line-height: 1;
+	}
+
+	i {
+		font-size: 12px;
+		display: inline-block;
+		margin-left: 10px;
+	}
+
+	&:hover {
+		background-color: $secondary_color;
+		color: $button_color;
+	}
+}
+
+// button 3
+.listzen-button .button-3 {
+	color: $button_text_color;
+	background-color: $rating_color;
+	box-shadow: 4px 7px 0 0 rgba(0, 0, 0, 0.2);
+	border: 2px solid $title_color;
+	border-radius: 100px;
+
+	.btn-wrap {
+		display: block;
+		overflow: hidden;
+		position: relative;
+		z-index: 1;
+		line-height: 1;
+	}
+
+	i {
+		font-size: 12px;
+		display: inline-block;
+		margin-left: 10px;
+	}
+
+	&:hover {
+		color: $button_text_color;
+	}
+
+}
+
+// button 4
+.listzen-button .button-4 {
+	color: $white_color;
+	background-color: $gray_color;
+	box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.7);
+
+	.btn-wrap {
+		display: block;
+		overflow: hidden;
+		position: relative;
+		z-index: 1;
+		line-height: 1;
+	}
+
+	i {
+		font-size: 12px;
+		display: inline-block;
+		margin-left: 10px;
+	}
+
+	&:hover {
+		color: $button_color;
+		background-color: $primary_color;
+		box-shadow: unset !important;
+	}
+}

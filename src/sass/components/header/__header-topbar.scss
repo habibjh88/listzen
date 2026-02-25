@@ -1,0 +1,146 @@
+@use '../../abstract' as *;
+/* Topbar
+***************************/
+
+.listzen-topbar {
+	font-size: 14px;
+	background: $menu_color;
+	color: $meta_light;
+	height: 42px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	a {
+		color: $meta_light;
+
+		&:hover {
+			color: $primary_color;
+		}
+	}
+
+	i {
+		color: currentColor !important;
+	}
+
+	@media(max-width: 650px) {
+		.topbar-contact .address,
+		#topbar-menu > div {
+			display: none;
+		}
+		.topbar-right {
+			padding: 5px 0;
+		}
+	}
+
+	.topbar-row {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.topbar-contact {
+		display: flex;
+		gap: 25px;
+
+		> div {
+			display: inline-flex;
+			gap: 10px;
+			justify-content: center;
+			align-items: center;
+			line-height: 1.5;
+		}
+
+		span i {
+			font-size: 13px;
+		}
+
+		@media (max-width: 992px){
+			gap: 15px;
+			> span.address {
+				display: none;
+			}
+		}
+
+	}
+
+	.social-icon {
+		display: inline-flex;
+		align-items: center;
+		gap: 10px;
+		line-height: 1.5;
+
+		a {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: $meta_light;
+
+			&:hover {
+				color: $white_color;
+			}
+		}
+
+		@media (max-width: 600px){
+			> label {
+				display: none;
+			}
+		}
+
+
+	}
+
+
+	#topbar-menu {
+		ul.listzen-topbar-menu > li > a {
+			color: $meta_light;
+			&:hover {
+				color: $white_color;
+			}
+		}
+
+		ul li a {
+			font-size: 14px;
+			padding: 5px 20px 5px 0;
+			color: inherit;
+			font-weight: normal;
+			line-height: 30px;
+		}
+
+		ul ul li a {
+			font-size: 0.95em;
+			line-height: 1.6em;
+			padding: 3px 27px 3px 18px;
+			color: $body_color;
+		}
+
+		ul ul li a:hover {
+			color: $primary_color;
+		}
+
+		ul.listzen-topbar-menu > li.current-menu-item > a,
+		ul.listzen-topbar-menu > li.current-menu-ancestor > a {
+			color: $white_color !important;
+		}
+
+		ul ul li.current_page_item > a,
+		ul ul li.current-menu-ancestor > a {
+			color: $primary_color !important;
+		}
+
+		.listzen-topbar-menu > li .dropdown-menu li a .caret i {
+			transform: rotate(-90deg) scale(0.8);
+		}
+
+		.listzen-topbar-menu > li > a .caret i {
+			transform: scale(0.8);
+		}
+	}
+}
+
+.has-trheader .site-header .listzen-topbar .mega-menu .dropdown-menu.depth_0 {
+	top: 40px;
+}
+
+.has-trheader .site-header .listzen-topbar * {
+	color: $white_color !important;
+}

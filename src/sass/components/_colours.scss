@@ -1,0 +1,34 @@
+@use '../abstract' as *;
+
+$colors: (
+	'primary':$primary_color,
+	'secondary':$secondary_color,
+	'success':#28a745,
+	'danger':#dc3545,
+	'warning':#ffc107,
+	'info':#17a2b8,
+);
+@each $colour, $hex in $colors {
+	.text-#{$colour} {
+		color: $hex;
+	}
+
+	.bg-#{$colour} {
+		background-color: $hex;
+	}
+
+	.border-#{$colour} {
+		border-color: $hex;
+	}
+}
+
+// Customize text selection
+::selection {
+	background: $primary_color;
+	color: $white_color;
+}
+
+::-moz-selection {
+	background: $primary_color;
+	color: $white_color;
+}

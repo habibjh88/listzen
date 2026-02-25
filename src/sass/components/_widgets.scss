@@ -1,0 +1,339 @@
+@use '../abstract' as *;
+
+$widget_li_space: 8px;
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+    margin: 0 0 30px;
+    overflow: hidden;
+}
+
+.widget a {
+    color: $body_color;
+}
+
+.widget a:hover {
+    color: $primary_color;
+}
+
+.widget {
+    ul, ol {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .wp-block-image {
+        margin-bottom: 0;
+        border-radius: var($site_radius);
+        overflow: hidden;
+    }
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+    margin-bottom: 1.5em;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.gallery-item {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    width: 100%;
+    padding: 0 5px;
+}
+
+.gallery-columns-2 .gallery-item {
+    max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+    max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+    max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+    max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+    max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+    max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+    max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+    max-width: 11.11%;
+}
+
+@media (max-width: 992px) {
+
+    .gallery-columns-3 .gallery-item,
+    .gallery-columns-4 .gallery-item {
+        max-width: 45.1%;
+    }
+
+    .gallery-columns-5 .gallery-item,
+    .gallery-columns-6 .gallery-item,
+    .gallery-columns-7 .gallery-item,
+    .gallery-columns-8 .gallery-item,
+    .gallery-columns-9 .gallery-item {
+        max-width: 22%;
+    }
+}
+
+@media (max-width: 550px) {
+    .gallery-columns-5 .gallery-item,
+    .gallery-columns-6 .gallery-item,
+    .gallery-columns-7 .gallery-item,
+    .gallery-columns-8 .gallery-item,
+    .gallery-columns-9 .gallery-item {
+        max-width: 45.1%;
+    }
+}
+
+
+/*------------------------
+  Sidebar Widget
+-------------------------*/
+
+/*------ List ----------*/
+
+.widget_block .wp-block-group__inner-container > ul,
+.widget > ul {
+    margin-top: 0;
+}
+
+.widget_block .wp-block-group__inner-container > ul > li:last-child a {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.wp-block-latest-posts__featured-image img {
+    float: left;
+    width: 100px;
+    margin-right: 12px;
+    border-radius: var($site_radius);
+    display: inline-block;
+}
+
+ol.wp-block-latest-comments {
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+ol.wp-block-latest-comments li:last-child {
+    margin-bottom: 0;
+}
+
+/*------ Recent Comments ------*/
+
+.widget_recent_comments {
+    ul {
+        li {
+
+            a {
+                border-bottom: none;
+                padding: 0;
+            }
+
+            &:last-child {
+                padding-bottom: 0;
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+/*---- RSS ------*/
+.widget_rss {
+    .widget-heading {
+        img {
+            margin-top: -3px;
+        }
+    }
+
+    ul {
+        li {
+            margin-bottom: 15px;
+
+            .rsswidget {
+                display: block;
+                margin-bottom: 8px;
+                font-weight: 600;
+                line-height: 1.4;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+
+/*--------- Text Widget ---------*/
+
+.widget_text .widget-heading {
+    margin-bottom: 15px;
+}
+
+.widget_text select {
+    margin-top: 0;
+}
+
+/*------ Select ----------*/
+.widget select {
+    background-color: $white_color;
+    border: 1px solid $border_color;
+    border-radius: var($btn_radius);
+    padding: 6px 13px;
+    width: 100%;
+    outline: none;
+    appearance: none;
+    background-size: 10px;
+    background-image: url(../images/select-arrow.svg) !important;
+    background-repeat: no-repeat;
+    background-position: 95%;
+    transition: all ease 0.31s;
+    height: 46px;
+}
+
+/*------ Calender ----------*/
+
+.wp-calendar-table {
+    caption {
+        font-size: 1rem;
+        caption-side: top;
+        padding: 10px;
+        text-align: left;
+        background-color: $title_color;
+        color: #FFF;
+        line-height: 1;
+    }
+
+    td {
+        padding: 0;
+        text-align: center;
+        line-height: 32px;
+
+        a {
+            font-weight: 600;
+        }
+    }
+
+    td#today, a {
+        color: $primary_color;
+    }
+}
+
+.wp-calendar-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+//About Widget
+.widget_listzen_about {
+    .about-logo {
+        margin-bottom: 15px;
+
+        img {
+            max-height: 50px;
+            width: auto;
+        }
+    }
+
+    .about-logo a {
+        font-size: 36px;
+        font-weight: 600;
+    }
+
+    .description {
+        margin-bottom: 15px;
+    }
+
+    .about-social {
+        margin-top: 15px;
+
+        .social-link {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: $meta_color;
+            color: #FFF;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.4s;
+
+            &:hover {
+                color: $white_color;
+                background: $primary_color;
+            }
+        }
+    }
+
+    .address,
+    .email,
+    .phone {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        margin-bottom: 5px;
+
+        [class*=listzen-icon] {
+            margin-top: 5px;
+        }
+    }
+}
+
+
+//Contact Widget
+.widget_listzen_contact {
+    ul {
+        padding: 0 30px;
+    }
+
+    ul li {
+        display: flex;
+        align-items: flex-start;
+
+        &.phone-no {
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
+
+    li [class*=listzen-icon-] {
+        flex: 0 0 30px;
+        padding-top: 4px;
+        justify-content: start;
+    }
+
+    li i {
+        color: $primary_color;
+    }
+
+    li p {
+        margin: 0;
+    }
+
+}

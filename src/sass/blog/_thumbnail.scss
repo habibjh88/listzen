@@ -1,0 +1,138 @@
+@use '../abstract' as *;
+//Post Thumbnail
+.listzen-post-card {
+
+    .post-thumbnail-wrap {
+
+        position: relative;
+
+        img {
+            transition: 0.4s;
+            object-fit: cover;
+        }
+
+        &.post-single .video-wrapper {
+
+            padding-top: 68%;
+
+            video,
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .slick-slide img {
+            width: 100%;
+            height: auto;
+        }
+
+        .post-thumbnail {
+            overflow: hidden;
+
+            &, img {
+                border-radius: var($site_radius);
+            }
+        }
+
+        .post-thumbnail {
+            aspect-ratio: 10/6.7;
+        }
+
+        .post-thumbnail {
+            position: relative;
+            margin-bottom: 0;
+            display: flex;
+
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, .1);
+                z-index: 2;
+                transition: .4s;
+            }
+
+            &:after {
+                opacity: 0;
+            }
+
+            &:before {
+                opacity: 1;
+            }
+
+            .post-thumb-link {
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+
+            video,
+            audio,
+            iframe {
+                width: 100%;
+                height: 100%;
+            }
+
+            audio {
+                background: #f1f3f4;
+            }
+        }
+
+        &.post-grid .post-thumbnail img,
+        .post-thumbnail video,
+        .post-thumbnail audio,
+        .post-thumbnail iframe {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+
+    .article-inner-wrapper:hover .post-thumbnail::before {
+        opacity: 0;
+        transition-duration: 1s;
+    }
+
+    .article-inner-wrapper:hover .post-thumbnail::after {
+        opacity: 1;
+    }
+}
+
+
+.post-edit-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 13px;
+    color: $white_color !important;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    line-height: 1;
+    max-width: 44px;
+    max-height: 24px;
+    opacity: 0;
+    visibility: hidden;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+
+    &:hover {
+        background: $black_color;
+    }
+
+    .post-thumbnail:hover & {
+        opacity: 1;
+        visibility: visible;
+    }
+}

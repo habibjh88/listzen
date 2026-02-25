@@ -1,0 +1,98 @@
+@use '../abstract' as *;
+
+body {
+    margin: 0;
+    color: $body_color;
+    background-color: $body_bg_color;
+    overflow-x: hidden;
+}
+
+body .site {
+    opacity: 1;
+    transition: .3s;
+    transition-delay: 1s;
+}
+
+.content-area {
+    padding-top: 90px;
+    padding-bottom: 100px;
+}
+
+.no-trheader.no-banner .content-area {
+    padding-top: 64px;
+    padding-bottom: 80px;
+}
+
+.has-trheader.no-banner .content-area {
+    padding-top: 180px;
+}
+
+.listzen-breadcrumb-wrapper.no-bg.no-color + div {
+    padding-top: 50px;
+}
+
+/*blend mode*/
+.listzen-blend img {
+    filter: brightness(100%) contrast(100%) saturate(0%) blur(0px) hue-rotate(0deg) !important;
+}
+
+//Custom Layout
+.listzen-custom-layout {
+    display: flex;
+    flex: 0 1 auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: $custom_gutter;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    @media (min-width: 768px) {
+        flex-wrap: nowrap;
+    }
+
+    .listzen-widget-area {
+        width: 100%;
+        padding: 0 !important;
+        @media (min-width: 768px) {
+            flex: 0 0 $sidebar_width;
+            max-width: $sidebar_width;
+        }
+    }
+}
+
+
+body.layout-full-width .listzen-custom-layout .listzen-content-area {
+    max-width: 100%;
+}
+
+body:not(.layout-full-width) .listzen-custom-layout .listzen-content-area {
+    flex: 0 0 1 !important;
+    max-width: 100%;
+    padding: 0;
+    @media(min-width: 768px) {
+        flex: 0 0 calc(100% - ($sidebar_width + $custom_gutter));
+        max-width: calc(100% - ($sidebar_width + $custom_gutter));
+    }
+}
+
+.gap-10 {
+    gap: 10px;
+}
+
+.gap-15 {
+    gap: 15px;
+}
+
+.gap-20 {
+    gap: 20px;
+}
+
+.clearfix {
+    @include clearfix;
+}
+
+.m-negative-400 {
+    margin-right: auto;
+    margin-left: -400px;
+}

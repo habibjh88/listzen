@@ -1,0 +1,48 @@
+@use '../abstract' as *;
+
+.frm-fluent-form {
+    .ff-t-container {
+        position: relative;
+    }
+
+
+    .frm-fluent-form {
+        flex: 1;
+    }
+
+    .subscribe-form-1 & {
+        .ff-column-container {
+            gap: 10px !important;
+
+            .ff-t-cell {
+                @media (min-width: 768px) {
+                    flex: 1;
+
+                    &:last-child {
+                        max-width: 192px;
+                    }
+                }
+
+                input, button {
+                    border: none;
+                    border-radius: var($btn_radius);
+                    min-height: 50px;
+                }
+            }
+        }
+    }
+
+    .footer-widget & {
+        .ff-column-container {
+            flex-direction: column;
+            gap: 5px;
+
+            input, button {
+                border: none;
+                border-radius: var($btn_radius);
+                min-height: 50px;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

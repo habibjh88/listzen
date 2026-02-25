@@ -1,0 +1,34 @@
+@use '../../abstract/index' as *;
+
+.rtcl.store-content-wrap {
+    .banner .rtcl-thumbnail {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+.rtcl.store-content-wrap .store-banner .store-name-logo .store-logo {
+    width: 150px;
+    height: 150px;
+    border-radius: var($site_radius);
+    overflow: hidden;
+}
+
+.rtcl.store-content-wrap .store-banner .store-name-logo .store-logo img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    padding: 0;
+}
+
+.rtcl.store-content-wrap .store-banner .store-name-logo .store-info {
+    padding: 0 20px;
+}
+
+.rtcl.store-content-wrap .store-banner .store-name-logo .store-name h2 {
+    margin-bottom: 10px;
+    font-size: 3.4em;
+}

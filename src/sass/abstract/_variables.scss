@@ -1,0 +1,83 @@
+//Colours
+$base_fs: 16px;
+$columns: 12;
+$gutter: 30px;
+$spacing: 20;
+$dropdown_width: 230px;
+$container_width: var(--listzen-container-width);
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1240px;
+
+$breakpoints: ('sm': $sm, 'md': $md, 'lg': $lg, 'xl': $xl);
+
+//Accent Color
+$primary_color: var(--listzen-primary-color);
+$secondary_color: var(--listzen-secondary-color);
+$primary_dark: var(--listzen-primary-dark);
+$primary_light: var(--listzen-primary-light);
+$primary_soft: var(--listzen-primary-soft);
+
+//Site wide
+$body_bg_color: var(--listzen-body-bg-color);
+$body_color: var(--listzen-body-color);
+$border_color: var(--listzen-border-color);
+$title_color: var(--listzen-title-color);
+$rating_color: var(--listzen-rating-color);
+$button_color: var(--listzen-button-color);
+$button_text_color: var(--listzen-button-text-color);
+$meta_color: var(--listzen-meta-color);
+$meta_light: var(--listzen-meta-light);
+$footer_dark_color: #abb5c5;
+$gray_color: var(--listzen-gray); //#DDDDDD
+$gray_light: var(--listzen-gray-light); //#f8f8f8
+$gray_dark: var(--listzen-gray-dark); //#7a7d81
+
+//RGB
+$body_rgb: var(--listzen-body-rgb);
+$title_rgb: var(--listzen-title-rgb);
+$primary_rgb: var(--listzen-primary-rgb);
+$secondary_rgb: var(--listzen-secondary-rgb);
+$category_color: var(--listzen-cat-color, $primary_color);
+
+//Menu
+$menu_color: var(--listzen-menu-color);
+$menu_active_color: var(--listzen-menu-active-color);
+$menu_bg_color: var(--listzen-menu-bg-color);
+$submenu_bg_color: var(--listzen-submenu-bg-color);
+$tr_menu_color: var(--listzen-tr-menu);
+$tr_menu_hover: var(--listzen-tr-menu-hover);
+
+//General Color
+$white_color: #FFFFFF;
+$black_color: #000000;
+$meta_overlay_color: #CBCBCB;
+$footer_bg_color: #00081B;
+$footer_border_color: #323748;
+
+//this is calculative value that's why did not use var() mixin for the variables
+$site_radius: --listzen-radius;
+$btn_radius: --listzen-btn-radius;
+
+
+//nav drawer width
+$nav_drawer_width: 400px;
+:root {
+    --menu-collapse-in: 1025px;
+}
+
+//Custom Layout
+$sidebar_width: 320px;
+$custom_gutter: 50px;
+
+//Header
+$dropdown_width: 230px;
+$transparent_menu_color: var(--listzen-tr-menu);
+$transparent_menu_hover: var(--listzen-tr-menu-hover);
+
+
+$base_font: var(--listzen-body-font, 'Inter'), sans-serif;
+$heading_font: var(--listzen-heading-font, 'Inter'), sans-serif;
+$menu_font: var(--listzen-menu-font, 'Inter'), sans-serif;

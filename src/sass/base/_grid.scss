@@ -1,0 +1,261 @@
+@use '../abstract' as *;
+.row {
+	display: flex;
+	flex-direction: row;
+	box-sizing: border-box;
+	margin-right: calc(-1 * $gutter / 2);
+	margin-left: calc(-1 * $gutter / 2);
+	flex: 0 1 auto;
+	flex-wrap: wrap;
+	@include clearfix;
+}
+
+.row-grid {
+	display: grid;
+	box-sizing: border-box;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 30px;
+	@include clearfix;
+}
+
+[class^='col-'],
+[class*=' col-'] {
+	position: relative;
+	box-sizing: border-box;
+	width: 100%;
+	min-height: 1px;
+	padding-right: calc($gutter / 2);
+	padding-left: calc($gutter / 2);
+	margin-bottom: $gutter;
+	flex: 0 0 auto;
+}
+
+.nowrap {
+	flex-wrap: nowrap;
+}
+
+// order options
+.reverse {
+	flex-direction: row-reverse;
+}
+
+// define flex items if no column width
+.flex-item {
+	flex: 0 0 auto;
+
+	&.grow {
+		flex-grow: 1;
+	}
+}
+
+@for $i from 1 through $columns {
+	.col-xs-#{$i} {
+		width: percentage(calc($i / $columns));
+	}
+}
+
+$breakpoint-counter: 0;
+
+@for $i from 1 through $columns {
+	.col-#{$i} {
+		max-width: percentage(calc($i / $columns));
+		flex: 0 0 percentage(calc($i / $columns));
+	}
+}
+
+@each $breakpoint, $val in $breakpoints {
+	$breakpoint-counter: $breakpoint-counter + 1;
+
+	@media (min-width: $val) {
+		@for $i from 1 through $columns {
+			.col-#{$breakpoint}-#{$i} {
+				max-width: percentage(calc($i / $columns));
+				flex: 0 0 percentage(calc($i / $columns));
+			}
+		}
+
+		@each $modifier in pull, push {
+			@for $i from 0 through $columns {
+				.col-#{$breakpoint}-#{$modifier}-#{$i} {
+					@include make-col-modifier($modifier, $i, $columns);
+				}
+			}
+		}
+
+		@for $i from 0 through $columns - 1 {
+			@if $breakpoint-counter != 1 or $i != 0 {
+				// Avoid emitting useless .offset-xs-0
+				.col-#{$breakpoint}-offset-#{$i} {
+					@include make-col-modifier(offset, $i, $columns);
+				}
+			}
+		}
+	}
+}
+
+.col-24,
+.col-sm-24 {
+	max-width: 20%;
+	flex: 0 0 20%;
+}
+
+@media (min-width: 992px) {
+	.col-md-24 {
+		max-width: 20%;
+		flex: 0 0 20%;
+	}
+}
+
+@media (min-width: 1240px) {
+	.col-lg-24 {
+		max-width: 20%;
+		flex: 0 0 20%;
+	}
+}
+
+
+//Custom classes
+.d-flex {
+	display: flex;
+}
+
+.d-grid {
+	display: grid;
+}
+
+.ml-auto {
+	margin-left: auto;
+}
+
+.mr-auto {
+	margin-right: auto;
+}
+
+.mx-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.d-none {
+	display: none;
+}
+
+.d-inline-flex {
+	display: inline-flex !important;
+}
+
+.flex-row {
+	flex-direction: row !important;
+}
+
+.flex-row-reverse {
+	flex-direction: row-reverse !important;
+}
+
+.flex-column {
+	flex-direction: column !important;
+}
+
+.flex-column-reverse {
+	flex-direction: column-reverse !important;
+}
+
+.flex-wrap {
+	flex-wrap: wrap !important;
+}
+
+.flex-nowrap {
+	flex-wrap: nowrap !important;
+}
+
+.flex-wrap-reverse {
+	flex-wrap: wrap-reverse !important;
+}
+
+.justify-content-start {
+	justify-content: flex-start !important;
+}
+
+.justify-content-end {
+	justify-content: flex-end !important;
+}
+
+.justify-content-center {
+	justify-content: center !important;
+}
+
+.justify-content-between {
+	justify-content: space-between !important;
+}
+
+.justify-content-around {
+	justify-content: space-around !important;
+}
+
+.align-items-start {
+	align-items: flex-start !important;
+}
+
+.align-items-end {
+	align-items: flex-end !important;
+}
+
+.align-items-center {
+	align-items: center !important;
+}
+
+.align-items-baseline {
+	align-items: baseline !important;
+}
+
+.align-items-stretch {
+	align-items: stretch !important;
+}
+
+.align-content-start {
+	align-content: flex-start !important;
+}
+
+.align-content-end {
+	align-content: flex-end !important;
+}
+
+.align-content-center {
+	align-content: center !important;
+}
+
+.align-content-between {
+	align-content: space-between !important;
+}
+
+.align-content-around {
+	align-content: space-around !important;
+}
+
+.align-content-stretch {
+	align-content: stretch !important;
+}
+
+.align-self-auto {
+	align-self: auto !important;
+}
+
+.align-self-start {
+	align-self: flex-start !important;
+}
+
+.align-self-end {
+	align-self: flex-end !important;
+}
+
+.align-self-center {
+	align-self: center !important;
+}
+
+.align-self-baseline {
+	align-self: baseline !important;
+}
+
+.align-self-stretch {
+	align-self: stretch !important;
+}

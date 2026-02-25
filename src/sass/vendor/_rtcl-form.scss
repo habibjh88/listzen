@@ -1,0 +1,28 @@
+@use '../abstract' as *;
+
+.rtcl-has-group-title {
+    .rtcl-fb-repeater-item-fields .rtcl-fb-field:not(:nth-child(1), :nth-child(2)) {
+        display: none;
+    }
+
+    background: #ebebf1 !important;
+    border-color: #a9a8af !important;
+}
+
+.rtcl-fb-section .section-title,
+.rtcl-fb-section .section-header {
+    color: $primary_color !important;
+}
+
+.rtcl-fb-section-columns .rtcl-checkbox-group.horizontal {
+    display: grid;
+    gap: 5px;
+
+
+    @media (min-width: 600px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: 1200px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

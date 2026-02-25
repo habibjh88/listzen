@@ -1,0 +1,150 @@
+@use '../abstract' as *;
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+[hidden],
+template {
+    display: none;
+}
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+:focus-visible {
+    outline: none;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+dfn {
+    font-style: italic;
+}
+
+mark {
+    background: #ff0;
+    color: $black_color;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+figure {
+    margin: 0 0 20px;
+}
+
+pre {
+    background: #f8f8f8;
+    line-height: 1.2;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 32px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+mark, ins {
+    padding: .2rem .4rem;
+    font-size: 87.5%;
+    color: #fff;
+    background-color: #212529;
+    border-radius: .2rem;
+    text-decoration:none;
+    margin-right: 3px;
+}
+
+kbd {
+    color: #00030C;
+    padding: 3px 5px 2px 5px;
+    margin: 0 1px;
+    background: #f8f8f7;
+}
+
+.wp-block-code {
+    border: 1px solid #e7e7e7;
+    border-radius: var($btn_radius);
+    font-family: Menlo, Consolas, monaco, monospace;
+    padding: .8em 1em;
+}
+
+a {
+    color: $primary_color;
+}
+
+a:hover {
+    color: $primary_dark;
+}
+
+* {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+//Table CSS
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 15px 0;
+    width: 100%;
+}
+
+table th,
+table td,
+.wp-block-table td,
+.wp-block-table th {
+    border: 1px solid #e7e7e7;
+    padding: 8px;
+    text-align: center;
+}
+
+td,
+th {
+    padding: 0;
+}

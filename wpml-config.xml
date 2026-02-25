@@ -1,0 +1,29 @@
+<wpml-config>
+    <admin-texts>
+        <key name="listzen">
+            <key name="listzen_phone" />
+            <key name="listzen_email" />
+            <key name="listzen_website" />
+            <key name="listzen_contact_address" />
+            <key name="listzen_get_login_label" />
+            <key name="listzen_header_button_label" />
+            <key name="listzen_contact_info_label" />
+            <key name="listzen_follow_us_label" />
+            <key name="listzen_about_label" />
+            <key name="listzen_about_text" />
+            <key name="listzen_footer_labels" />
+            <key name="listzen_ready_label" />
+            <key name="listzen_contact_button_text" />
+            <key name="listzen_blog_labels" />
+            <key name="listzen_author_prefix" />
+            <key name="listzen_tags_label" />
+            <key name="listzen_social_label" />
+            <key name="listzen_blog_read_more" />
+            <key name="listzen_error_heading" />
+            <key name="listzen_error_text" />
+            <key name="listzen_error_button_text" />
+            <key name="listzen_footer_copyright" />
+            <key name="listzen_post_related_title" />
+        </key>
+    </admin-texts>
+</wpml-config>

@@ -1,0 +1,110 @@
+@use '../../abstract' as *;
+//Style 3
+.single.listzen-single-3 {
+	.content-area {
+		padding-top: 0;
+	}
+	.listzen-breadcrumb-wrapper {
+		position: absolute;
+		width: 100%;
+	}
+	.content-top-area {
+		position: relative;
+		padding: 0;
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgb(0 0 0 / 28%);
+		}
+		.entry-header {
+			position: relative;
+			z-index: 6;
+		}
+		.single-top-header {
+			position: absolute;
+			bottom: 40px;
+			left: 0;
+			right: 0;
+			width: 100%;
+		}
+		.post-separate-meta {
+			a {
+				background-color: $primary_color;
+				color: $button_color;
+				border: none;
+				&:hover {
+					background-color: $secondary_color;
+					color: $button_color;
+				}
+			}
+		}
+		.wp-caption-text {
+			position: absolute;
+			right: 24px;
+			bottom: 9px;
+			background-color: rgba(0, 0, 0, 0.3);
+			color: $white_color;
+			padding: 5px 16px;
+		}
+		.post-thumbnail {
+			position: relative;
+			height: 600px;
+			overflow: hidden;
+			&,img{
+				border-radius: 0;
+			}
+
+			@media(max-width: 767px) {
+				height: 400px;
+			}
+
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, .5);
+			}
+
+			img {
+				border-radius: 0;
+				height: 100%;
+			}
+		}
+
+		.entry-title {
+			color: $white_color;
+		}
+
+		.blog-post-meta {
+			color: $white_color;
+
+			a,
+			li:before {
+				color: $white_color;
+			}
+
+			a:hover {
+				color: $primary_color;
+			}
+		}
+	}
+
+	.entry-footer {
+		.tag-links {
+			a {
+				background-color: rgba($primary_rgb, 1);
+				color: $button_color;
+				&:hover {
+					color: $button_color;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,27 @@
+@use '../../abstract' as *;
+/* Footer Menu Wrapper
+***************************/
+
+.site-footer {
+	.footer-menu-wrapper {
+		border-top: 1px solid $gray_color;
+
+		.listzen-footer-1 & {
+			.align-default {
+				justify-content: center;
+			}
+		}
+	}
+
+	.listzen-navigation ul > li > ul.depth_0 {
+		bottom: 100%;
+		top: auto;
+	}
+
+	.listzen-navigation ul li ul li ul {
+		left: 100%;
+		top: auto;
+		bottom: 0;
+	}
+
+}

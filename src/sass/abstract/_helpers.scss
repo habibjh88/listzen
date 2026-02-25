@@ -1,0 +1,61 @@
+@mixin clearfix {
+	&::after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin list_default {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+@mixin flex_center($direction:row) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: $direction;
+}
+
+@mixin button_style($color, $bg, $bg_hover) {
+	color: $color;
+	background-color: $bg;
+	border-color: $bg;
+	&:hover {
+		color: $color;
+		background-color: $bg_hover;
+		border-color: $bg_hover;
+	}
+}
+
+@mixin line_clamp($lines) {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: $lines;
+	-webkit-box-orient: vertical;
+}
+
+@mixin transition_default($allowItem : all) {
+	-webkit-transition: $allowItem 320ms ease;
+	-moz-transition: $allowItem 320ms ease;
+	-ms-transition: $allowItem 320ms ease;
+	-o-transition: $allowItem 320ms ease;
+	transition: $allowItem 320ms ease;
+}
+
+@mixin font_size($size, $line: 28px) {
+	font-size: $size;
+	line-height: $line;
+}
+@mixin safe_border_radius($css-var, $amount: 0px, $operator: "-") {
+	@if $operator == "-" {
+		border-radius: max(0px, calc(var(#{$css-var}) - #{$amount}));
+	} @else if $operator == "+" {
+		border-radius: max(0px, calc(var(#{$css-var}) + #{$amount}));
+	} @else {
+		@error "Invalid operator `#{$operator}`. Use '+' or '-'.";
+	}
+}

@@ -1,0 +1,31 @@
+@use '../abstract' as *;
+/* Sticky Menu CSS
+***************************/
+
+.listzen-sticky .main-header-section {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
+	left: 0;
+	right: 0;
+	background-color: $white_color;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+	-webkit-animation: upsdown 1000ms;
+	animation: upsdown 1000ms;
+
+	.navigation-area nav > ul > li > a {
+		padding: 30px 15px;
+	}
+}
+
+//Admin bar compatibility
+body.admin-bar .listzen-sticky .main-header-section {
+	top: 32px;
+	@media (max-width: 782px) {
+		top: 46px;
+	}
+	@media (max-width: 600px) {
+		top: 0;
+	}
+}

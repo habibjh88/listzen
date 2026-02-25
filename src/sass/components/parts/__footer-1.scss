@@ -1,0 +1,77 @@
+@use '../../abstract' as *;
+
+.listzen-footer-1 {
+
+    .site-footer {
+        --footer-text-color: #B0B0B0;
+        --footer-widget-title-color: #FFFFFF;
+        --footer-border-color: #1F1F1F;
+
+        border-top: none;
+        color: #B0B0B0;
+        background: $title_color;
+
+        .widget {
+            ul li a{
+                padding: 0;
+                &::before {
+                   content: none;
+                }
+                &:hover {
+                    color: $primary_color;
+                }
+            }
+        }
+        .footer-copyright-wrapper {
+            border-top: none;
+            color: var(--footer-text-color);
+            padding: 0;
+
+            .row {
+                padding: 20px 0;
+                border-top: 1px solid var(--footer-border-color);
+            }
+
+            .copyright-text {
+                justify-content: center;
+            }
+
+            a {
+                color: $white_color;
+
+                &:hover {
+
+                    color: $primary_color;
+                }
+            }
+
+            .social-icon {
+                justify-content: flex-end;
+            }
+
+
+            @media (min-width: 768px) {
+                [class*='col'] {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            .social-label {
+                margin-right: 10px;
+            }
+
+            .social-icon {
+                a {
+                    color: var(--footer-text-color);
+                    background-color: transparent !important;
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+
+    }
+
+
+}

@@ -1,0 +1,375 @@
+@use '../abstract' as *;
+
+.rtcl.rtcl-elementor-widget .rtcl-listings .rtcl-meta-buttons-wrap {
+    left: auto;
+    right: 15px;
+}
+
+.rtcl.rtcl-elementor-widget .rtcl-listings .rtcl-meta-buttons-wrap .rtcl-el-button a {
+    background-color: $primary_color;
+    color: $white_color;
+    border-radius: var($btn_radius);
+
+    &:hover {
+        background: $primary_dark;
+    }
+}
+
+.rtcl.rtcl-elementor-widget .rtcl-list-view .rtin-content-area {
+    position: static;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.rtcl.rtcl-elementor-widget {
+    --rtcl-black-lite: var(--listzen-primary-soft);
+    --meta-color: var(--listzen-meta-color);
+    --meta-icon-color: var(--listzen-meta-color);
+    --meta-icon-hover-color: var(--listzen-primary-color);
+}
+
+.rtcl-el-slider-wrapper .rtcl-slider-btn {
+    height: 48px;
+    width: 48px;
+    border-radius: var($btn_radius);
+    font-size: 20px;
+    border: 1px solid $gray_color;
+    background: #fff;
+    color: $title_color;
+
+    &:hover {
+        color: $primary_color;
+        border-color: $primary_color
+    }
+}
+.rtcl-slider-btn-style-3 .rtcl-slider-btn {
+    right: 54px;
+}
+@media (min-width: 1366px) {
+
+    .rtcl-slider-btn-style-2 .rtcl-slider-btn.button-right {
+        left: 54px;
+    }
+}
+
+.rtcl.rtcl-elementor-widget .rtcl-list-view {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+
+    &.columns-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &.columns-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &.columns-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+//List style 6
+.rtcl.rtcl-elementor-widget .rtcl-list-view {
+
+    @media (max-width: 767px) {
+        .rtcl-listing-card .rtcl-author-info {
+            left: 18px;
+            transform: translateY(-95px);
+        }
+    }
+
+    &.rtcl-style-6-view {
+        .listing-item {
+            border: none !important;
+        }
+
+        @media (max-width: 991px) {
+            grid-template-columns: 1fr;
+            .rtcl-author-info {
+                left: 18px;
+                bottom: 20px;
+                transform: none;
+            }
+        }
+
+        .rtcl-listing-card {
+            background: #F8F8F8;
+            flex-direction: row;
+            gap: 20px;
+
+            .listing-thumb {
+                flex: 0 0 40%;
+                max-width: 260px;
+                margin: 0;
+
+                @media (min-width: 500px) {
+                    flex: 0 0 47%;
+                    .rtcl-thumbnail {
+                        aspect-ratio: 10/8.55;
+                    }
+                }
+            }
+
+            .item-price {
+                order: 20;
+                margin-top: 15px;
+            }
+
+            .rtcl-price {
+                font-size: 20px;
+                color: $title_color;
+                font-weight: bold;
+            }
+        }
+
+        .rtin-content-area {
+            flex-direction: column;
+        }
+
+        .rtin-right {
+            margin: 15px 0 0;
+            align-self: flex-start;
+            flex: 0 0 auto;
+        }
+    }
+
+    &.rtcl-style-7-view {
+
+        .rtcl-listing-card {
+
+            .rtcl-listing-meta-data {
+                margin-top: 3px;
+                margin-bottom: 8px;
+                display: flex;
+                flex-direction: row;
+                gap: 12px;
+                flex-wrap: wrap;
+
+                .rtcl-icon {
+                    font-size: 14px;
+                }
+            }
+
+            .rtcl-short-description {
+                order: 99;
+            }
+
+            .rtin-details-button {
+                min-height: 50px;
+                min-width: 136px;
+                padding: 5px;
+                line-height: 1;
+                background: $primary_soft;
+                color: $primary_color;
+                align-self: flex-start;
+                margin: 8px 0;
+                order: 999;
+                border-radius: var($btn_radius);
+
+                &:hover {
+                    color: $white_color;
+                    background: $primary_color;
+                }
+            }
+
+            .item-price {
+                order: 110;
+                margin: 15px 0 7px;
+
+                .rtcl-price {
+                    font-size: 18px;
+                    color: $title_color;
+                    max-width: 190px;
+                    font-weight: bold;
+                }
+            }
+
+            @media (min-width: 992px) {
+                .item-content {
+                    padding-right: 200px;
+                }
+                .rtin-details-button,
+                .item-price {
+                    position: absolute;
+                    right: 30px;
+                    top: 50%;
+
+                }
+                .item-price {
+                    margin-top: -30px;
+                }
+
+                .rtin-details-button {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
+
+.rtcl.rtcl-elementor-widget .rtcl-grid-view {
+
+    &.rtcl-style-6-view {
+
+        .rtcl-listing-card {
+            border-color: $gray_color;
+
+            .rtcl-meta-buttons-wrap {
+                bottom: auto;
+                top: 15px;
+            }
+            
+            .item-content {
+                display: flex;
+                flex-direction: column;
+
+                .listing-title {
+                    order: -8;
+                    margin-bottom: 10px;
+                }
+                .reviews-rating {
+                    margin-bottom: -2px;
+                }
+            }
+
+            .rtcl-author-info {
+                order: -10;
+                position: absolute;
+                transform: translateY(-73px);
+                right: 30px;
+                z-index: 10;
+                .author-avatar {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+
+            .rtin-right {
+                order: -11;
+                margin: 0;
+            }
+
+            .listing-thumb-inner {
+                position: relative;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(360deg, #0000007d, transparent);
+                    z-index: 1;
+                }
+            }
+
+            .item-price {
+                position: absolute;
+                transform: translateY(-74px);
+                padding: 3.5px 10px;
+                background: $white_color;
+                z-index: 10;
+                border-radius: calc(var($btn_radius) + 1px);
+
+                .rtcl-price {
+                    font-weight: bold;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1550px) {
+    .offset-right-300 .rtcl-listings {
+        margin-right: -310px;
+    }
+}
+
+.rtcl.rtcl-elementor-widget .rtcl-listings .rtcl-meta-buttons-wrap a {
+    min-width: 100%;
+}
+
+.rtcl.rtcl-elementor-widget .rtcl-listings .rtcl-meta-buttons-wrap .rtcl-el-button .rtcl-icon-spinner {
+    position: absolute;
+    color: #FFF;
+    background: $primary_color;
+}
+
+
+body .rtcl-slider-nav .rtcl-slider-thumb-item img {
+    height: 75px;
+    object-fit: cover;
+}
+
+//Quick view
+body .rtcl-qvw {
+    .rtcl-quick-view-container .rtcl-listing-meta-data li a {
+        color: $body_color
+    }
+
+    .rtcl-qv-row {
+        display: flex;
+        flex-direction: column;
+
+        .rtcl-qv-gallery {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+
+    .rtcl-slider-nav .rtcl-slider-thumb-item img {
+        width: 100%;
+    }
+
+    .rtcl-price {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        background: black;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        transform: scale(.6);
+
+        &:hover {
+            background: $primary_color;
+        }
+    }
+
+    .rtcl-qv-row .rtcl-qv-summary {
+        padding-left: 0;
+        padding-right: 0;
+
+        :is(h2, h3, h4) {
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+
+        .rtcl-qv-title {
+            font-size: 26px;
+            color: $title_color;
+            margin-bottom: 10px;
+
+            a {
+                color: currentColor;
+
+                &:hover {
+                    color: $primary_color;
+                }
+            }
+        }
+
+        .rtcl-listing-meta-data a:hover {
+            color: $primary_color;
+        }
+    }
+}

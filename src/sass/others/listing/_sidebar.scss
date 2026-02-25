@@ -1,0 +1,218 @@
+@use '../../abstract/index' as *;
+
+@mixin placeholderstyle {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: $body_color;
+}
+
+@mixin widgetTitleStyle {
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: $title_color;
+}
+
+.rtcl {
+    .rtcl-widget-ajax-filter-class {
+        margin-bottom: 0;
+    }
+
+    .rtcl-sidebar-inner {
+        .rtcl-listing-sidebar-info-wrap .listing-sidebar > div,
+        > div:not(.rtcl-listing-sidebar-info-wrap) {
+            padding: 20px 30px 30px;
+            border: 1px solid $gray_color;
+            border-radius: var($site_radius);
+            box-shadow: 0 0 20px #F0F0F0;
+            margin-bottom: 30px;
+            > .wp-block-image {
+                margin: -20px -30px -30px;
+                max-width: inherit;
+            }
+        }
+
+        .wp-block-heading {
+            font-size: 18px;
+            margin-bottom: 16px;
+            margin-top: 0;
+            line-height: 1.4;
+        }
+
+        > .widget_media_image {
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin-bottom: 5px;
+            }
+        }
+
+        .rtcl-widget-heading {
+            @include widgetTitleStyle;
+            font-size: 18px;
+
+            :is(h2, h3) {
+                background-color: transparent;
+                color: #000;
+                padding: 0;
+                border-radius: 0;
+            }
+        }
+
+        .rtcl-ajax-filter-item .rtcl-filter-title-wrap {
+            padding: 0;
+        }
+    }
+}
+
+//Ajax Filter css modify
+
+.rtcl-ajax-filter-wrap {
+    box-shadow: none;
+
+    .rtcl-ajax-filter-item {
+        min-height: 45px;
+        margin-bottom: 15px;
+
+        &.rtcl-filter_search,
+        &.rtcl-filter_category,
+        &.rtcl-filter_radius_filter {
+            margin-bottom: 5px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .rtcl-filter-content {
+            padding: 0;
+        }
+
+        &.disable-collapse:not(.rtcl-custom-select) i {
+            display: none;
+        }
+
+        &.should-hide-title:not(.rtcl-custom-select) {
+            .rtcl-filter-title-wrap {
+                display: none;
+            }
+        }
+
+        .rtcl-filter-title-wrap {
+            border-bottom: none;
+            font-size: 16px;
+            @include widgetTitleStyle;
+        }
+
+        .rtcl-filter-title-wrap .rtcl-icon {
+            border: none;
+            background: $primary_soft;
+
+            &.rtcl-reset {
+                background: none;
+            }
+        }
+
+        ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            @include placeholderstyle;
+        }
+
+        ::-moz-placeholder { /* Firefox 19+ */
+            @include placeholderstyle;
+        }
+
+        :-ms-input-placeholder { /* IE 10+ */
+            @include placeholderstyle;
+        }
+
+        :-moz-placeholder { /* Firefox 18- */
+            @include placeholderstyle;
+        }
+
+
+        .rtcl-form-control {
+            background: #F9F9F9;
+            border: 1px solid #E8E8E8;
+            height: 45px;
+            box-shadow: none;
+            padding-top: 5px;
+        }
+
+        //Custom Select style
+        &.rtcl-custom-select {
+            position: relative;
+
+            .rtcl-filter-title-wrap {
+                padding: 0 !important;
+                border: 1px solid #E8E8E8;
+                background: #F9F9F9;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: var($btn_radius);
+                color: $body_color;
+
+                .rtcl-filter-title {
+                    @include placeholderstyle;
+                    margin-left: 15px;
+                }
+
+                .rtcl-icon {
+                    border: none;
+                    background-color: transparent;
+                    transform: rotate(0deg);
+                    color: currentColor;
+                }
+
+            }
+
+            .rtcl-filter-content {
+                position: absolute !important;
+                top: 55px;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: #FFF;
+                z-index: 10;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.4s, visibility 0.4s, top 0.4s;
+                border: 1px solid #ddd;
+                border-radius: var($btn_radius);
+                padding: 20px;
+            }
+
+            &.select-active {
+                .rtcl-filter-content {
+                    top: 44px;
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+
+
+    }
+}
+
+.single-rtcl_listing .rtcl-listing-booking-wrap > form {
+    padding: 0;
+}
+
+.single-rtcl_listing .rtcl-listing-booking-wrap .rtcl-form-group > label {
+    margin-bottom: 5px;
+    display: block;
+}
+
+.rtcl .listing-sidebar .rtcl-listing-side-title {
+    padding-left: 0;
+    padding-right: 0;
+}
