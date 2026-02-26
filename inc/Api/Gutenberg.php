@@ -43,7 +43,7 @@ class Gutenberg {
 			'wide-images'       => true,
 		] );
 
-		$primary_color     = listzen_option( 'listzen_primary_color', '#FA350C' );
+		$primary_color     = listzen_option( 'listzen_primary_color', '#FE6254' );
 		$secondary_color   = listzen_option( 'listzen_secondary_color', '#111111' );
 
 		add_theme_support( 'editor-color-palette', [

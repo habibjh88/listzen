@@ -191,9 +191,9 @@
 			text-align: center;
 
 			&:hover {
-				background-color: $secondary_color;
-				color: $white_color;
-				border-color: $secondary_color;
+				background-color: $primary_color;
+				color: $white_color !important;
+				border-color: $primary_color;
 			}
 		}
 	}

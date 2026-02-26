@@ -63,9 +63,9 @@ class DynamicStyles {
 	 */
 	private function inline_style() {
 
-		$primary_color     = listzen_option( 'listzen_primary_color', '#FA350C' );
-		$primary_dark      = listzen_option( 'listzen_primary_dark', '#D42400' );
-		$primary_light     = listzen_option( 'listzen_primary_light', '#FF4E2A' );
+		$primary_color     = listzen_option( 'listzen_primary_color', '#FE6254' );
+		$primary_dark      = listzen_option( 'listzen_primary_dark', '#EE4131' );
+		$primary_light     = listzen_option( 'listzen_primary_light', '#FF786C' );
 		$primary_soft      = listzen_option( 'listzen_primary_soft', '#FFEEEA' );
 		$secondary_color   = listzen_option( 'listzen_secondary_color', '#111111' );
 		$body_bg_color     = listzen_option( 'listzen_body_bg_color', '#FFFFFF' );

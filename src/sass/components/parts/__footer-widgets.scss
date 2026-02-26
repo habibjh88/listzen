@@ -10,6 +10,32 @@
 	padding-bottom: 50px;
 	font-size: 15px;
 
+	.frm-fluent-form {
+		.ff-t-container {
+			flex-direction: column;
+			gap: 0;
+			.ff-el-group {
+				margin-bottom: 10px;
+			}
+
+			.ff-el-form-control,
+			.ff-btn-submit {
+				height: 50px;
+				border-radius: var($site_radius)
+			}
+			.ff-btn-submit {
+				background: $primary_color;
+				color: $white_color;
+				border: none;
+				transition: all 0.4s !important;
+				&:hover {
+					background: $primary_dark;
+					color: $white_color;
+				}
+			}
+		}
+	}
+
 	//Default widgets overwrite
 	.footer-widgets {
 		display: flex;
