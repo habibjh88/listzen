@@ -35,7 +35,7 @@ class TgmConfig {
 				'slug'     => 'listzen-core',
 				'source'   => 'listzen-core.zip',
 				'required' => true,
-				'version'  => '1.0.1'
+				'version'  => '1.0.0'
 			],
 			[
 				'name'     => esc_html__( 'Elementor Page Builder', 'listzen' ),
@@ -52,14 +52,21 @@ class TgmConfig {
 				'slug'     => 'classified-listing-pro',
 				'source'   => 'classified-listing-pro.zip',
 				'required' => true,
-				'version'  => '4.0.6',
+				'version'  => '4.0.7',
 			],
 			[
 				'name'     => 'Classified Listing Store',
 				'slug'     => 'classified-listing-store',
 				'source'   => 'classified-listing-store.zip',
 				'required' => true,
-				'version'  => '3.0.4',
+				'version'  => '3.0.5',
+			],
+			[
+				'name'     => 'Classified Listing Booking',
+				'slug'     => 'rtcl-booking',
+				'source'   => 'rtcl-booking.zip',
+				'required' => true,
+				'version'  => '3.1.1',
 			],
 			[
 				'name'     => esc_html__( 'Review Schema', 'listzen' ),
