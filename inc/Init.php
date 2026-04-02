@@ -55,7 +55,7 @@ final class Init {
 		Shortcode\Shortcode::instance();
 
 		if ( is_admin() ) {
-//			new Utility\Utility();
+			new Utility\Utility();
 		}
 	}
 

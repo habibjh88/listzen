@@ -221,10 +221,14 @@
             font-size: 20px;
         }
     }
+}
 
-/*    [data-element="author_info"] {
-            > span {
-                display: none;
-            }
-    }*/
+.rtcl-listable {
+    .listable-value {
+        word-break: break-word;
+    }
+}
+
+.rtcl-sl-container .rtcl-sl-section .rtcl-sl-section-title {
+    font-weight: 700;
 }

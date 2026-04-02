@@ -65,7 +65,7 @@ class TgmConfig {
 				'name'     => 'Classified Listing Booking',
 				'slug'     => 'rtcl-booking',
 				'source'   => 'rtcl-booking.zip',
-				'required' => true,
+				'required' => false,
 				'version'  => '3.1.1',
 			],
 			[
