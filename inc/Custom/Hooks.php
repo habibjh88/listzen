@@ -6,6 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 use Listzen\Modules\IconList;
 use Listzen\Traits\SingletonTraits;
+use Rtcl\Helpers\Functions;
 
 /**
  * Hooks Class
@@ -98,6 +99,20 @@ class Hooks {
 	 */
 	public static function wp_footer_hook() {
 		echo '<style>.listzen-header-footer .site-header {opacity: 1}</style>';
+
+		$is_popup_login = listzen_option( 'listzen_header_login_style' );
+		$is_popup_login = ( ! is_user_logged_in() && $is_popup_login !== 'link' ) ? "listzen-popup-login" : "";
+		if ( $is_popup_login && ! is_user_logged_in() && class_exists(Functions::class) && ! Functions::is_account_page() ) {
+			?>
+			<div class="listzen-popup" style="display:none;">
+				<div class="listzen-popup-overlay"></div>
+				<div class="listzen-popup-content">
+					<span class="listzen-popup-close">&times;</span>
+					<?php Functions::login_form(); ?>
+				</div>
+			</div>
+			<?php
+		}
 	}
 
 	/**

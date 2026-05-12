@@ -221,6 +221,7 @@ if ( ! function_exists( 'listzen_menu_icons_group' ) ) {
 
 		$has_hamburg    = $args['hamburg'] ? 'has-hamburger' : 'no-hamburger';
 		$is_popup_login = listzen_option( 'listzen_header_login_style' );
+
 		?>
         <div class="menu-icon-wrapper d-flex ml-auto align-items-center">
             <ul class="d-flex gap-15 align-items-center <?php echo esc_attr( $menu_classes ) ?>">
@@ -253,7 +254,7 @@ if ( ! function_exists( 'listzen_menu_icons_group' ) ) {
 					$login_text     = sprintf( "<span class='mobile-hide'>%s</span>",
 						is_user_logged_in() ? __( 'My Account', 'listzen' ) : __( 'Login', 'listzen' )
 					);
-					$is_popup_login = ( ! is_user_logged_in() && $is_popup_login ) ? "listzen-popup-login" : "";
+					$is_popup_login = ( ! is_user_logged_in() && $is_popup_login !== 'link' ) ? "listzen-popup-login" : "";
 
 					if ( Fns::is_cl_active() ) {
 						$myaccount_page_id = Functions::get_option_item( 'rtcl_advanced_settings', 'myaccount' );
@@ -306,17 +307,7 @@ if ( ! function_exists( 'listzen_menu_icons_group' ) ) {
         </div>
 
 		<?php
-		if ( $is_popup_login && ! is_user_logged_in() && class_exists(Functions::class) && ! Functions::is_account_page() ) {
-			?>
-            <div class="listzen-popup" style="display:none;">
-                <div class="listzen-popup-overlay"></div>
-                <div class="listzen-popup-content">
-                    <span class="listzen-popup-close">&times;</span>
-					<?php Functions::login_form(); ?>
-                </div>
-            </div>
-            <?php
-		}
+
 	}
 }
 
