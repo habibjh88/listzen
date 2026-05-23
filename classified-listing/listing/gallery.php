@@ -16,6 +16,8 @@ use Rtcl\Helpers\Functions;
 use Rtcl\Models\Listing;
 use Listzen\Helpers\Fns;
 use Listzen\Helpers\CLFns;
+use Rtcl\Services\FormBuilder\FBHelper;
+
 // phpcs:disable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 if ( ! $listing ) {
 	global $listing;
@@ -62,7 +64,16 @@ if ( $slider_cols > 1 ) {
 
 	$has_rtcl_gallery_clomun = 'rtcl-has-column';
 }
-
+$placeholder_image = Functions::get_option_item( 'rtcl_misc_media_settings', 'placeholder_image', null, 'number' );
+if ( $placeholder_image && ( ( CLFns::is_separate_video() && FBHelper::isEnabled() && $total_gallery_image < 1 ) || $total_gallery_item < 1 ) ) {
+    $default_img_url = wp_get_attachment_image_src( $placeholder_image, 'full' );
+    ?>
+    <div class="rtcl-slider-item">
+        <img class="rtcl-responsive-img" src="<?php echo esc_url( $default_img_url[0] ); ?>" alt="<?php echo esc_attr( $listing->get_the_title() ) ?>">
+    </div>
+    <?php
+    return;
+}
 if ( $total_gallery_item ) :
 	$dataOptions['threshold'] = 15;
 	?>

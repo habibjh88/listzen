@@ -186,6 +186,11 @@
 }
 
 .rtcl .rtcl-sl-containers {
+    .rtcl-sidebar-wrapper {
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+
     .rtcl-sl-container {
         gap: 50px;
     }
@@ -231,4 +236,8 @@
 
 .rtcl-sl-container .rtcl-sl-section .rtcl-sl-section-title {
     font-weight: 700;
+}
+
+.rtcl .rtcl-sl-containers .rtcl-list-group-item:not(:last-of-type) {
+    margin-bottom: 0 !important;
 }

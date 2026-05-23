@@ -639,4 +639,8 @@ class Fns {
 	}
 
 
+	static function is_radius_booking_active() {
+		return function_exists( 'radius_booking' );
+	}
+
 }

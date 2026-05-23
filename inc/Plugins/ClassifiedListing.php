@@ -25,6 +25,7 @@ use Rtcl\Services\FormBuilder\FBHelper;
 use Listzen\Modules\IconList;
 use RtclPro\Controllers\Hooks\TemplateHooks as ProTemplateHooks;
 use Rtcl\Controllers\SocialProfilesController;
+use RadiusTheme\RadiusBooking\Integrations\ClassifiedListing\ListingFrontendHooks;
 
 /**
  * ThemeJetpack Class
@@ -42,10 +43,30 @@ class ClassifiedListing {
 			return;
 		}
 
+         if ( Fns::is_radius_booking_active() ) {
+            add_action( 'wp_loaded', function () {
+                remove_action(
+                        'rtcl_single_listing_sidebar', array(
+                        ListingFrontendHooks::class,
+                        'renderBookNowButton'
+                ), 30 );
+                remove_action(
+                        'rtcl_after_single_listing_sidebar', array(
+                        ListingFrontendHooks::class,
+                        'renderBookNowButton'
+                ), 30 );
+                remove_action(
+                        'rtcl_single_listing_inner_sidebar', array(
+                        ListingFrontendHooks::class,
+                        'renderBookNowButton'
+                ), 30 );
+            } );
+        }
+
 		// Filter hooks
 		remove_action( 'rtcl_before_main_content', [ TemplateHooks::class, 'breadcrumb' ], 6 );
 		add_filter( 'rtcl_listing_extra_class', [ $this, 'add_listing_classes' ] );
-
+        add_filter('rtcl_related_slider_options', [$this, 'rtcl_related_slider_options']);
 		add_filter( 'rtcl_show_page_title', '__return_false' );
 		add_filter( 'rtcl_filter_form_items', [ $this, 'add_custom_filter_form_items' ] );
 		add_filter( 'rtcl_ajax_filter_item_class', [ $this, 'add_rtcl_ajax_filter_item_class' ], 10, 2 );
@@ -81,6 +102,7 @@ class ClassifiedListing {
 		add_action( 'rtcl_single_listing_button_group', [ $this, 'seller_email' ], 20 );
 		add_action( 'rtcl_listing_seller_information', [ $this, 'social_profiles' ], 55 );
 		add_action( 'rtcl_listing_seller_information', [ __CLASS__, 'seller_email_address' ], 21 );
+        add_action( 'rtcl_listing_seller_information', [ __CLASS__, 'add_booking_button' ], 90 );
 		add_action( 'rtcl_single_listing_sidebar', [ $this, 'rtcl_business_hour' ] );
 		add_action( 'rtcl_single_listing_amenities', [ $this, 'listing_single_amenities' ] );
 		add_action( 'rtcl_single_listing_services', [ $this, 'listing_single_services' ] );
@@ -111,7 +133,37 @@ class ClassifiedListing {
 				add_action( 'rtcl_listing_seller_information', [ $this, 'add_user_login_link' ], 1 );
 			}
 		}
+
+	    remove_action( 'rtcl_single_listing_content', [ TemplateHooks::class, 'add_single_listing_title' ], 5 );
+        add_action( 'rtcl_single_listing_content', [ $this, 'add_single_listing_title' ], 5 );
 	}
+
+    public static function add_single_listing_title() {
+		/** @var Listing $listing */
+		global $listing; ?>
+		<div class="rtcl-listing-title"><h1 class="entry-title"><?php
+				$listing->the_title(); ?></h1></div>
+		<?php
+	}
+
+        public static function add_booking_button( $listing ) {
+            if ( ! is_singular( 'rtcl_listing' ) ) {
+            }
+            if ( ! Fns::is_radius_booking_active() ) {
+             return null;
+         }
+            $args = ['listing_id' => $listing->get_id()];
+            echo rtrb_cl_get_booking_button($args);
+        }
+      public static function rtcl_related_slider_options( $options ) {
+
+        $desktop_columns = Functions::get_option_item( 'rtcl_single_listing_settings', 'related_posts_columns', 3, 'number' );
+        $options['breakpoints'][1300] = [
+                "slidesPerView" => $desktop_columns,
+            ];
+
+        return $options;
+    }
 
 	public static function output_main_wrapper_start() {
 		?>
@@ -418,6 +470,20 @@ class ClassifiedListing {
 	}
 
 	public function rtcl_single_listing_settings_options( $options ) {
+
+        $new_options = [];
+		foreach ( $options as $id => $option ) {
+			$new_options[ $id ] = $option;
+			if ( 'related_posts_per_page' === $id ) {
+				$new_options['related_posts_columns'] = [
+					'title'       => esc_html__( 'Related Listings Columns (Desktop)', 'listzen' ),
+					'type'        => 'number',
+					'default'     => 3,
+					'description' => esc_html__( 'Number of columns of related listing.', 'listzen' ),
+				];
+			}
+		}
+		$options = $new_options;
 
 		$options['has_compare_icon']  = [
 			'title'       => esc_html__( 'Enable Compare Icon', 'listzen' ),

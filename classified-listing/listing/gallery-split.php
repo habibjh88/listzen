@@ -16,6 +16,8 @@ use Rtcl\Helpers\Functions;
 use Rtcl\Models\Listing;
 use Listzen\Helpers\Fns;
 use Listzen\Helpers\CLFns;
+use Rtcl\Services\FormBuilder\FBHelper;
+
 // phpcs:disable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 if ( ! $listing ) {
 	global $listing;
@@ -32,6 +34,18 @@ $total_gallery_item   = $total_gallery_image + $total_gallery_videos;
 $gallery_size         = 'rtcl-gallery';
 $gallery_style        = CLFns::listing_gallery_style();
 $gallery_cols         = absint( CLFns::listing_slider_cols() );
+
+$placeholder_image = Functions::get_option_item( 'rtcl_misc_media_settings', 'placeholder_image', null, 'number' );
+if ( $placeholder_image && ( ( CLFns::is_separate_video() && FBHelper::isEnabled() && $total_gallery_image < 1 ) || $total_gallery_item < 1 ) ) {
+    $default_img_url = wp_get_attachment_image_src( $placeholder_image, 'full' );
+    ?>
+    <div class="rtcl-slider-item">
+        <img class="rtcl-responsive-img" src="<?php echo esc_url( $default_img_url[0] ); ?>" alt="<?php echo esc_attr( $listing->get_the_title() ) ?>">
+    </div>
+    <?php
+    return;
+}
+
 if ( $total_gallery_item ) :
 	?>
     <div class="rtcl-gallery-wrapper mb-4">

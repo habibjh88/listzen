@@ -107,6 +107,13 @@
         }
     }
 
+    .rtrb-cl-book-now {
+        background: $primary_color !important;
+        &:hover {
+            background: $primary_dark !important;
+        }
+    }
+
     .rtcl-related-listing-wrap {
         .rtcl-related-title {
             padding: 0;
@@ -348,6 +355,8 @@
 
                     .rtcl-author-badge {
                         margin-top: 2px;
+                        color: #818181;
+                        margin-bottom: 10px;
                     }
                 }
             }

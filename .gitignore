@@ -62,6 +62,7 @@ node_modules
 package-lock.json
 yarn.lock
 bun.lockb
+bun.lock
 
 # Compiled Files and Build Dirs #
 ##########

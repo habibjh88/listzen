@@ -6,7 +6,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-04-02 11:43+0000\n"
+"POT-Creation-Date: 2026-05-12 11:46+0000\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -143,7 +143,7 @@ msgstr ""
 msgid "Your review is awaiting approval"
 msgstr ""
 
-#: ../classified-listing/listing/review.php:73, ../inc/template-tags.php:1027
+#: ../classified-listing/listing/review.php:73, ../inc/template-tags.php:1018
 msgid "Reply"
 msgstr ""
 
@@ -212,23 +212,23 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: ../inc/template-tags.php:254
+#: ../inc/template-tags.php:255
 msgid "My Account"
 msgstr ""
 
-#: ../inc/template-tags.php:254
+#: ../inc/template-tags.php:255
 msgid "Login"
 msgstr ""
 
-#: ../inc/template-tags.php:979
+#: ../inc/template-tags.php:970
 msgid "Pingback:"
 msgstr ""
 
-#: ../inc/template-tags.php:1008
+#: ../inc/template-tags.php:999
 msgid "Edit"
 msgstr ""
 
-#: ../inc/template-tags.php:1016
+#: ../inc/template-tags.php:1007
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
@@ -272,7 +272,7 @@ msgstr ""
 msgid "Huge"
 msgstr ""
 
-#: ../inc/Custom/Hooks.php:117
+#: ../inc/Custom/Hooks.php:132
 msgid "RT Icons"
 msgstr ""
 

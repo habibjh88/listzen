@@ -5,6 +5,7 @@
 	"main": "index.js",
 	"prettier": "@wordpress/prettier-config",
 	"scripts": {
+		"postinstall": "node scripts/patch-yargs.js && node scripts/patch-webpackbar.js",
 		"dev": "npm run development",
 		"development": "mix",
 		"watch": "mix watch",
@@ -26,7 +27,7 @@
 		"theme",
 		"starter"
 	],
-	"author": "Alessandro Castellani <me@radiustheme.com> (https://radiustheme.com)",
+	"author": "RadiusTheme <me@radiustheme.com> (https://radiustheme.com)",
 	"license": "GPL-3.0",
 	"bugs": {
 		"url": "https://github.com/RadiusTheme/"
@@ -52,6 +53,7 @@
 		"rtlcss": "^4.1.1",
 		"sass": "^1.32.13",
 		"sass-loader": "^12.4.0",
-		"wp-pot": "^1.10.2"
+		"wp-pot": "^1.10.2",
+		"webpack": "5.94.0"
 	}
 }
