@@ -83,7 +83,9 @@ if ( ! $listing->can_show_date() && ! $listing->can_show_user() && ! $listing->c
 		?>
         <li class="rt-location">
             <i class="rtcl-icon rt-icon-marker"></i>
-			<?php $listing->the_locations( true, true ); ?>
+			<?php
+            CLFns::listing_custom_location($listing);
+            //$listing->the_locations( true, true ); ?>
         </li>
 	<?php endif; ?>
 	<?php if ( $listing->can_show_views() ) : ?>

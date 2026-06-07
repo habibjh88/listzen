@@ -5,6 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 use Rtcl\Helpers\Functions;
+use Rtcl\Models\Listing;
 use RtclAgent;
 use RtclPro\Helpers\Fns;
 use Listzen\Helpers\Fns as ThemeFns;
@@ -515,14 +516,18 @@ class CLFns {
 				$listing->get_the_time()
 			);
 		}
-		if ( $instance['rtcl_show_location'] ) {
-			if ( wp_strip_all_tags( $listing->the_locations( false ) ) ) {
-				$location = sprintf(
-					'<li class="location"><i class="rtcl-icon rt-icon-marker" aria-hidden="true"></i>%s</li>',
-					$listing->the_locations( false, true )
-				);
-			}
-		}
+        if ( $instance['rtcl_show_location'] ) {
+            if ( wp_strip_all_tags( $listing->the_locations( false ) ) ) {
+                ob_start();
+                self::listing_custom_location($listing);
+                $_location = ob_get_clean();
+
+                $location = sprintf(
+                        '<li class="location"><i class="rtcl-icon rt-icon-marker" aria-hidden="true"></i>%s</li>',
+                        $_location
+                );
+            }
+        }
 		if ( $instance['rtcl_show_phone_number'] ) {
 			$phone = get_post_meta( $listing->get_id(), 'phone', true );
 			if ( wp_strip_all_tags( $listing->the_locations( false ) ) ) {
@@ -786,4 +791,14 @@ class CLFns {
 	static function business_hour_pos() {
 		return listzen_option( 'listzen_listing_business_hour_pos', 'sidebar' );
 	}
+
+    public static function listing_custom_location( $listing ) {
+        if ( is_a( $listing, Listing::class ) ) {
+            if ('full' === listzen_option('listing_location_format') && $location = $listing->user_contact_location_at_single()) {
+                echo implode( '<span class="rtcl-delimiter">,</span>&nbsp;', $location ); //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+            } else {
+                $listing->the_locations(true, true);
+            }
+        }
+    }
 }

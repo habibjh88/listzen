@@ -84,6 +84,17 @@ class Listing extends Customizer {
 				],
 			],
 
+            'listing_location_format' => [
+                'type' => 'select',
+                'label' => __('Location Format', 'listzen'),
+                'description' => __('Choose how the listing location is displayed.', 'listzen'),
+                'default' => 'default',
+                'choices' => [
+                    'default' => esc_html__('Default Location', 'listzen'),
+                    'full' => esc_html__('Show Full Location', 'listzen'),
+                ],
+            ],
+
 			'listing_price_precision' => [
 				'type'  => 'number',
 				'label' => __( 'Price precision', 'listzen' ),
