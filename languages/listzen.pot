@@ -6,7 +6,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-05-12 11:46+0000\n"
+"POT-Creation-Date: 2026-06-17 12:46+0000\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -47,7 +47,7 @@ msgstr ""
 msgid "All ads from \"%s\""
 msgstr ""
 
-#: ../classified-listing/listing/business-hours.php:31, ../classified-listing/listing/business-hours.php:46, ../inc/Plugins/ClassifiedListing.php:486
+#: ../classified-listing/listing/business-hours.php:31, ../classified-listing/listing/business-hours.php:46, ../inc/Plugins/ClassifiedListing.php:552
 msgid "Open"
 msgstr ""
 
@@ -55,19 +55,19 @@ msgstr ""
 msgid "Close"
 msgstr ""
 
-#: ../classified-listing/listing/business-hours.php:79, ../inc/Plugins/ClassifiedListing.php:480, ../inc/Plugins/ClassifiedListing.php:506
+#: ../classified-listing/listing/business-hours.php:79, ../inc/Plugins/ClassifiedListing.php:546, ../inc/Plugins/ClassifiedListing.php:572
 msgid "Closed Today"
 msgstr ""
 
-#: ../classified-listing/listing/business-hours.php:80, ../inc/Plugins/ClassifiedListing.php:488, ../inc/Plugins/ClassifiedListing.php:507
+#: ../classified-listing/listing/business-hours.php:80, ../inc/Plugins/ClassifiedListing.php:554, ../inc/Plugins/ClassifiedListing.php:573
 msgid "Closed"
 msgstr ""
 
-#: ../classified-listing/listing/business-hours.php:93, ../inc/Plugins/ClassifiedListing.php:479, ../inc/Plugins/ClassifiedListing.php:520
+#: ../classified-listing/listing/business-hours.php:93, ../inc/Plugins/ClassifiedListing.php:545, ../inc/Plugins/ClassifiedListing.php:586
 msgid "Open Today (24 Hours)"
 msgstr ""
 
-#: ../classified-listing/listing/business-hours.php:94, ../inc/Plugins/ClassifiedListing.php:521
+#: ../classified-listing/listing/business-hours.php:94, ../inc/Plugins/ClassifiedListing.php:587
 msgid "Open (24 Hours)"
 msgstr ""
 
@@ -119,7 +119,7 @@ msgstr ""
 msgid "terms & condition"
 msgstr ""
 
-#: ../classified-listing/listing/gallery.php:123
+#: ../classified-listing/listing/gallery.php:134
 msgid "Preview Thumbnail"
 msgstr ""
 
@@ -129,7 +129,7 @@ msgstr ""
 
 #. translators: View count
 #. translators: %s: views count
-#: ../classified-listing/listing/meta.php:92, ../inc/Helpers/CLFns.php:552
+#: ../classified-listing/listing/meta.php:94, ../inc/Helpers/CLFns.php:557
 msgid "%s view"
 msgid_plural "%s views"
 msgstr[0] ""
@@ -168,7 +168,7 @@ msgstr[1] ""
 msgid "Quick View"
 msgstr ""
 
-#: ../classified-listing/elementor/listing-ads/grid/style-1.php:108, ../classified-listing/elementor/listing-ads/grid/style-2.php:103, ../classified-listing/elementor/listing-ads/grid/style-3.php:187, ../classified-listing/elementor/listing-ads/grid/style-4.php:107, ../classified-listing/elementor/listing-ads/grid/style-5.php:185, ../classified-listing/elementor/listing-ads/grid/style-6.php:108, ../classified-listing/elementor/listing-ads/list/style-1.php:110, ../classified-listing/elementor/listing-ads/list/style-1.php:112, ../classified-listing/elementor/listing-ads/list/style-2.php:107, ../classified-listing/elementor/listing-ads/list/style-3.php:104, ../classified-listing/elementor/listing-ads/list/style-4.php:168, ../classified-listing/elementor/listing-ads/list/style-5.php:163, ../classified-listing/elementor/listing-ads/list/style-6.php:106, ../classified-listing/elementor/listing-ads/list/style-7.php:107, ../classified-listing/elementor/listing-ads-slider/grid/style-1.php:93, ../classified-listing/elementor/listing-ads-slider/grid/style-2.php:93, ../classified-listing/elementor/listing-ads-slider/grid/style-3.php:174, ../classified-listing/elementor/listing-ads-slider/grid/style-4.php:91, ../classified-listing/elementor/listing-ads-slider/grid/style-5.php:170, ../inc/Helpers/CLFns.php:376, ../inc/Helpers/CLFns.php:377, ../inc/Helpers/CLFns.php:379
+#: ../classified-listing/elementor/listing-ads/grid/style-1.php:108, ../classified-listing/elementor/listing-ads/grid/style-2.php:103, ../classified-listing/elementor/listing-ads/grid/style-3.php:187, ../classified-listing/elementor/listing-ads/grid/style-4.php:107, ../classified-listing/elementor/listing-ads/grid/style-5.php:185, ../classified-listing/elementor/listing-ads/grid/style-6.php:108, ../classified-listing/elementor/listing-ads/list/style-1.php:110, ../classified-listing/elementor/listing-ads/list/style-1.php:112, ../classified-listing/elementor/listing-ads/list/style-2.php:107, ../classified-listing/elementor/listing-ads/list/style-3.php:104, ../classified-listing/elementor/listing-ads/list/style-4.php:168, ../classified-listing/elementor/listing-ads/list/style-5.php:163, ../classified-listing/elementor/listing-ads/list/style-6.php:106, ../classified-listing/elementor/listing-ads/list/style-7.php:107, ../classified-listing/elementor/listing-ads-slider/grid/style-1.php:93, ../classified-listing/elementor/listing-ads-slider/grid/style-2.php:93, ../classified-listing/elementor/listing-ads-slider/grid/style-3.php:174, ../classified-listing/elementor/listing-ads-slider/grid/style-4.php:91, ../classified-listing/elementor/listing-ads-slider/grid/style-5.php:170, ../inc/Helpers/CLFns.php:377, ../inc/Helpers/CLFns.php:378, ../inc/Helpers/CLFns.php:380
 msgid "Compare"
 msgstr ""
 
@@ -230,6 +230,191 @@ msgstr ""
 
 #: ../inc/template-tags.php:1007
 msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: ../inc/Admin/BundlePluginGuard.php:74
+msgid "A valid Listzen theme license is required to install the selected bundled plugin(s). Please activate your license first, or uncheck the bundled plugins before continuing."
+msgstr ""
+
+#: ../inc/Admin/BundlePluginGuard.php:98
+msgid "A valid Listzen theme license is required to install this bundled plugin. Please activate your license first."
+msgstr ""
+
+#: ../inc/Admin/BundlePluginGuard.php:174
+msgid "License required"
+msgstr ""
+
+#: ../inc/Admin/BundlePluginGuard.php:176
+msgid "Activate license"
+msgstr ""
+
+#: ../inc/Admin/BundlePluginGuard.php:192
+msgid "A valid Listzen theme license is required to activate this bundled plugin. Please activate your license first."
+msgstr ""
+
+#: ../inc/Admin/BundlePluginGuard.php:198
+msgid "Go to License"
+msgstr ""
+
+#: ../inc/Admin/BundlePluginGuard.php:209
+msgid "License Required"
+msgstr ""
+
+#. translators: 1: opening anchor tag, 2: closing anchor tag
+#: ../inc/Admin/BundlePluginGuard.php:278
+msgid "A valid Listzen theme license is required to install the bundled premium plugins. %1$sActivate your license%2$s to unlock installation."
+msgstr ""
+
+#: ../inc/Admin/BundlePluginGuard.php:316
+msgid "License required to install or activate this bundled plugin."
+msgstr ""
+
+#. translators: 1: opening anchor tag, 2: closing anchor tag
+#: ../inc/Admin/LicenseController.php:91
+msgid "The Listzen theme license is not activated. %1$sActivate your license%2$s to receive automatic updates and premium support."
+msgstr ""
+
+#: ../inc/Admin/LicenseController.php:121, ../inc/Admin/LicenseController.php:138, ../inc/Admin/views/license-panel.php:45
+msgid "Theme License"
+msgstr ""
+
+#: ../inc/Admin/LicenseController.php:122
+msgid "License"
+msgstr ""
+
+#: ../inc/Admin/LicenseController.php:184, ../inc/Admin/views/license-panel.php:56
+msgid "Activated"
+msgstr ""
+
+#: ../inc/Admin/LicenseController.php:185, ../inc/Admin/views/license-panel.php:56
+msgid "Not Activated"
+msgstr ""
+
+#: ../inc/Admin/LicenseController.php:186
+msgid "Activating…"
+msgstr ""
+
+#: ../inc/Admin/LicenseController.php:187
+msgid "Deactivating…"
+msgstr ""
+
+#: ../inc/Admin/LicenseController.php:188, ../inc/Admin/LicenseController.php:252
+msgid "Please enter your license key."
+msgstr ""
+
+#: ../inc/Admin/LicenseController.php:189
+msgid "Network error. Please try again."
+msgstr ""
+
+#: ../inc/Admin/LicenseController.php:190
+msgid "Unexpected response. Please try again."
+msgstr ""
+
+#: ../inc/Admin/LicenseController.php:191
+msgid "Expires:"
+msgstr ""
+
+#: ../inc/Admin/LicenseController.php:192, ../inc/Admin/views/license-panel.php:25
+msgid "Lifetime license"
+msgstr ""
+
+#: ../inc/Admin/LicenseController.php:193
+msgid "Do you want to deactivate your license from this site?"
+msgstr ""
+
+#: ../inc/Admin/LicenseController.php:236
+msgid "Invalid action."
+msgstr ""
+
+#: ../inc/Admin/LicenseController.php:290
+msgid "License successfully activated."
+msgstr ""
+
+#: ../inc/Admin/LicenseController.php:315
+msgid "License could not be deactivated. Please try again."
+msgstr ""
+
+#: ../inc/Admin/LicenseController.php:327
+msgid "License successfully deactivated."
+msgstr ""
+
+#. translators: %s: expiration date
+#: ../inc/Admin/LicenseController.php:428
+msgid "Your license key expired on %s."
+msgstr ""
+
+#: ../inc/Admin/LicenseController.php:431
+msgid "Your license key has expired."
+msgstr ""
+
+#: ../inc/Admin/LicenseController.php:434
+msgid "Your license key has been disabled."
+msgstr ""
+
+#: ../inc/Admin/LicenseController.php:436
+msgid "Invalid license. Please double-check your key."
+msgstr ""
+
+#: ../inc/Admin/LicenseController.php:439
+msgid "Your license is not active for this URL."
+msgstr ""
+
+#. translators: %s: product name
+#: ../inc/Admin/LicenseController.php:443
+msgid "This appears to be an invalid license key for %s."
+msgstr ""
+
+#. translators: 1: number of sites already activated, 2: total activation limit
+#: ../inc/Admin/LicenseController.php:452
+msgid "Your license key has reached its activation limit (%1$d of %2$d sites used). Please deactivate the license on a site you no longer use, or upgrade your license to add more sites."
+msgstr ""
+
+#: ../inc/Admin/LicenseController.php:457
+msgid "Your license key has reached its activation limit. Please deactivate the license on a site you no longer use, or upgrade your license to add more sites."
+msgstr ""
+
+#: ../inc/Admin/LicenseController.php:459, ../inc/Admin/LicenseController.php:616
+msgid "An error occurred, please try again."
+msgstr ""
+
+#: ../inc/Admin/LicenseController.php:475
+msgid "Lifetime"
+msgstr ""
+
+#: ../inc/Admin/LicenseController.php:493
+msgid "Session expired. Please refresh the page and try again."
+msgstr ""
+
+#: ../inc/Admin/LicenseController.php:503
+msgid "You do not have permission to manage the license."
+msgstr ""
+
+#. translators: %d: HTTP status code
+#: ../inc/Admin/LicenseController.php:549
+msgid "Licensing server returned an unexpected status (HTTP %d). Please try again in a few minutes."
+msgstr ""
+
+#: ../inc/Admin/LicenseController.php:560
+msgid "Unexpected response from the licensing server. Please try again."
+msgstr ""
+
+#. translators: %s: licensing server hostname
+#: ../inc/Admin/LicenseController.php:591
+msgid "Outbound connections to %s are being blocked by your server or a security plugin. Please ask your host (or check WP_HTTP_BLOCK_EXTERNAL / WP_ACCESSIBLE_HOSTS in wp-config.php) to allow requests to this host, then try again."
+msgstr ""
+
+#. translators: %s: licensing server hostname
+#: ../inc/Admin/LicenseController.php:599
+msgid "The licensing server (%s) did not respond in time. Please check your internet connection and try again."
+msgstr ""
+
+#. translators: %s: licensing server hostname
+#: ../inc/Admin/LicenseController.php:607
+msgid "Could not resolve %s. Please check your server's DNS configuration and try again."
+msgstr ""
+
+#: ../inc/Admin/LicenseController.php:613
+msgid "A secure connection to the licensing server could not be established. Please ensure your server's CA bundle is up to date."
 msgstr ""
 
 #: ../inc/Api/Gutenberg.php:51, ../inc/Api/Customizer/Sections/ColorSite.php:50
@@ -305,63 +490,63 @@ msgid "Remove"
 msgstr ""
 
 #. translators: %s: number of reviews
-#: ../inc/Helpers/CLFns.php:310
+#: ../inc/Helpers/CLFns.php:311
 msgid "(%s Review)"
 msgid_plural "(%s Reviews)"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/Helpers/CLFns.php:619, ../inc/Helpers/CLFns.php:676
+#: ../inc/Helpers/CLFns.php:624, ../inc/Helpers/CLFns.php:681
 msgctxt "Thousand Shorthand"
 msgid "K"
 msgstr ""
 
-#: ../inc/Helpers/CLFns.php:620
+#: ../inc/Helpers/CLFns.php:625
 msgctxt "Million Shorthand"
 msgid "M"
 msgstr ""
 
-#: ../inc/Helpers/CLFns.php:621
+#: ../inc/Helpers/CLFns.php:626
 msgctxt "Billion Shorthand"
 msgid "B"
 msgstr ""
 
-#: ../inc/Helpers/CLFns.php:622
+#: ../inc/Helpers/CLFns.php:627
 msgctxt "Trillion Shorthand"
 msgid "T"
 msgstr ""
 
-#: ../inc/Helpers/CLFns.php:623
+#: ../inc/Helpers/CLFns.php:628
 msgctxt "Quadrillion Shorthand"
 msgid "Qa"
 msgstr ""
 
-#: ../inc/Helpers/CLFns.php:624
+#: ../inc/Helpers/CLFns.php:629
 msgctxt "Quintillion Shorthand"
 msgid "Qi"
 msgstr ""
 
-#: ../inc/Helpers/CLFns.php:677
+#: ../inc/Helpers/CLFns.php:682
 msgctxt "Thousands Shorthand"
 msgid "K"
 msgstr ""
 
-#: ../inc/Helpers/CLFns.php:678
+#: ../inc/Helpers/CLFns.php:683
 msgctxt "Lac Shorthand"
 msgid " Lac"
 msgstr ""
 
-#: ../inc/Helpers/CLFns.php:679
+#: ../inc/Helpers/CLFns.php:684
 msgctxt "Lacs Shorthand"
 msgid " Lacs"
 msgstr ""
 
-#: ../inc/Helpers/CLFns.php:680
+#: ../inc/Helpers/CLFns.php:685
 msgctxt "Cr Shorthand"
 msgid " Cr"
 msgstr ""
 
-#: ../inc/Helpers/CLFns.php:681
+#: ../inc/Helpers/CLFns.php:686
 msgctxt "Crs Shorthand"
 msgid " Crs"
 msgstr ""
@@ -949,83 +1134,91 @@ msgstr ""
 msgid "WP Fluent Forms"
 msgstr ""
 
-#: ../inc/Plugins/ClassifiedListing.php:130
+#: ../inc/Plugins/ClassifiedListing.php:182
 msgid "Please <a class='%1$s' href='%2$s'>login</a> to view the seller information."
 msgstr ""
 
-#: ../inc/Plugins/ClassifiedListing.php:194
+#: ../inc/Plugins/ClassifiedListing.php:246
 msgid "Tags"
 msgstr ""
 
-#: ../inc/Plugins/ClassifiedListing.php:231
+#: ../inc/Plugins/ClassifiedListing.php:283
 msgid "Video"
 msgstr ""
 
-#: ../inc/Plugins/ClassifiedListing.php:309
+#: ../inc/Plugins/ClassifiedListing.php:361
 msgid "Open Hours"
 msgstr ""
 
-#: ../inc/Plugins/ClassifiedListing.php:423
+#: ../inc/Plugins/ClassifiedListing.php:479
+msgid "Related Listings Columns (Desktop)"
+msgstr ""
+
+#: ../inc/Plugins/ClassifiedListing.php:482
+msgid "Number of columns of related listing."
+msgstr ""
+
+#: ../inc/Plugins/ClassifiedListing.php:489
 msgid "Enable Compare Icon"
 msgstr ""
 
-#: ../inc/Plugins/ClassifiedListing.php:426
+#: ../inc/Plugins/ClassifiedListing.php:492
 msgid "Check this to enable Compare Icon"
 msgstr ""
 
-#: ../inc/Plugins/ClassifiedListing.php:429
+#: ../inc/Plugins/ClassifiedListing.php:495
 msgid "Enable Print Icon"
 msgstr ""
 
-#: ../inc/Plugins/ClassifiedListing.php:432
+#: ../inc/Plugins/ClassifiedListing.php:498
 msgid "Check this to enable Print Icon"
 msgstr ""
 
-#: ../inc/Plugins/ClassifiedListing.php:435
+#: ../inc/Plugins/ClassifiedListing.php:501
 msgid "Enable Bookmark Icon"
 msgstr ""
 
-#: ../inc/Plugins/ClassifiedListing.php:437
+#: ../inc/Plugins/ClassifiedListing.php:503
 msgid "Check this to enable Bookmark Icon"
 msgstr ""
 
-#: ../inc/Plugins/ClassifiedListing.php:554
+#: ../inc/Plugins/ClassifiedListing.php:620
 msgid "See hours"
 msgstr ""
 
-#: ../inc/Plugins/ClassifiedListing.php:654, ../inc/Plugins/ClassifiedListing.php:656
+#: ../inc/Plugins/ClassifiedListing.php:720, ../inc/Plugins/ClassifiedListing.php:722
 msgid "Enable Map"
 msgstr ""
 
-#: ../inc/Plugins/ClassifiedListing.php:657
+#: ../inc/Plugins/ClassifiedListing.php:723
 msgid "Enable the map display on the archive page."
 msgstr ""
 
-#: ../inc/Plugins/ClassifiedListing.php:673
+#: ../inc/Plugins/ClassifiedListing.php:739
 msgid "Filter"
 msgstr ""
 
-#: ../inc/Plugins/ClassifiedListing.php:688
+#: ../inc/Plugins/ClassifiedListing.php:754
 msgid "Disable Collapse ?"
 msgstr ""
 
-#: ../inc/Plugins/ClassifiedListing.php:693
+#: ../inc/Plugins/ClassifiedListing.php:759
 msgid "Hide Title ?"
 msgstr ""
 
-#: ../inc/Plugins/ClassifiedListing.php:766, ../inc/Plugins/CLToolKits.php:94
+#: ../inc/Plugins/ClassifiedListing.php:832, ../inc/Plugins/CLToolKits.php:94
 msgid "Author Image"
 msgstr ""
 
-#: ../inc/Plugins/ClassifiedListing.php:767
+#: ../inc/Plugins/ClassifiedListing.php:833
 msgid "Rating"
 msgstr ""
 
-#: ../inc/Plugins/ClassifiedListing.php:768, ../inc/Plugins/CLToolKits.php:86
+#: ../inc/Plugins/ClassifiedListing.php:834, ../inc/Plugins/CLToolKits.php:86
 msgid "Phone Number"
 msgstr ""
 
-#: ../inc/Plugins/ClassifiedListing.php:774
+#: ../inc/Plugins/ClassifiedListing.php:840
 msgid "Listing owner email"
 msgstr ""
 
@@ -1209,77 +1402,47 @@ msgstr ""
 msgid "Cheatin&#8217; huh?"
 msgstr ""
 
-#: ../inc/Utility/AdminSettings.php:74, ../inc/Utility/AdminSettings.php:74, ../inc/Utility/AdminSettings.php:88
-msgid "Theme License"
+#. translators: %s: expiration date
+#: ../inc/Admin/views/license-panel.php:31
+msgid "Expires: %s"
 msgstr ""
 
-#: ../inc/Utility/AdminSettings.php:121
-msgid "Purchase Code"
+#: ../inc/Admin/views/license-panel.php:46
+msgid "Activate your license to receive automatic updates, premium features, and priority support."
 msgstr ""
 
-#: ../inc/Utility/AdminSettings.php:129
-msgid "License Status"
+#: ../inc/Admin/views/license-panel.php:52
+msgid "License status"
 msgstr ""
 
-#: ../inc/Utility/AdminSettings.php:137
-msgid "Note:"
+#: ../inc/Admin/views/license-panel.php:63
+msgid "License key"
 msgstr ""
 
-#: ../inc/Utility/AdminSettings.php:200
-msgid "Not Activated"
+#: ../inc/Admin/views/license-panel.php:72
+msgid "Enter your license key"
 msgstr ""
 
-#: ../inc/Utility/AdminSettings.php:206
-msgid "Domain Mismatch"
+#: ../inc/Admin/views/license-panel.php:80
+msgid "Toggle license key visibility"
 msgstr ""
 
-#: ../inc/Utility/AdminSettings.php:204, ../inc/Utility/Utility.php:181
-msgid "Activated"
+#. translators: %s: account URL
+#: ../inc/Admin/views/license-panel.php:92
+msgid "Your license key can be found in your <a href=\"%s\" target=\"_blank\" rel=\"noopener\">account dashboard</a> after purchase."
 msgstr ""
 
-#. translators: Support Center
-#: ../inc/Utility/AdminSettings.php:222
-msgid "Please keep in mind, you can activate one license in one domain, if you face any problem in activation, please contact our <a href=\"%s\" target=\"_blank\">Support Center</a>"
-msgstr ""
-
-#: ../inc/Utility/AdminSettings.php:245, ../inc/Utility/Utility.php:63, ../inc/Utility/Utility.php:53
+#: ../inc/Admin/views/license-panel.php:115
 msgid "Activate License"
 msgstr ""
 
-#: ../inc/Utility/Utility.php:58
-msgid "Please activate your theme using Envato"
+#: ../inc/Admin/views/license-panel.php:125
+msgid "Deactivate License"
 msgstr ""
 
-#: ../inc/Utility/Utility.php:60
-msgid "purchase code"
-msgstr ""
-
-#: ../inc/Utility/Utility.php:61
-msgid "to get full theme functionality and customer support."
-msgstr ""
-
-#: ../inc/Utility/Utility.php:51
-msgid "Your license key doesn't match your current domain. Please activate the license again for your current domain."
-msgstr ""
-
-#: ../inc/Utility/Utility.php:178
-msgid "Purchase code already activated for one domain!!!"
-msgstr ""
-
-#: ../inc/Utility/Utility.php:184
-msgid "Sorry!!! Purchase code does not match"
-msgstr ""
-
-#: ../inc/Utility/Utility.php:191
-msgid "Purchase code is required!!!"
-msgstr ""
-
-#: ../inc/Utility/Utility.php:205
-msgid "Please activate your theme using Envato purchase code, to install demo data."
-msgstr ""
-
-#: ../inc/Utility/Utility.php:219, ../inc/Utility/Utility.php:236
-msgid "Please activate your theme using Envato purchase code, to use this plugin."
+#. translators: 1: docs link, 2: support link
+#: ../inc/Admin/views/license-panel.php:146
+msgid "Need help? Read the <a href=\"%1$s\" target=\"_blank\" rel=\"noopener\">documentation</a> or <a href=\"%2$s\" target=\"_blank\" rel=\"noopener\">contact support</a>."
 msgstr ""
 
 #: ../inc/Api/Customizer/Pannels.php:42
@@ -2543,34 +2706,50 @@ msgid "Shorthand (K, Lac, Cr)"
 msgstr ""
 
 #: ../inc/Api/Customizer/Sections/Listing.php:89
+msgid "Location Format"
+msgstr ""
+
+#: ../inc/Api/Customizer/Sections/Listing.php:90
+msgid "Choose how the listing location is displayed."
+msgstr ""
+
+#: ../inc/Api/Customizer/Sections/Listing.php:93
+msgid "Default Location"
+msgstr ""
+
+#: ../inc/Api/Customizer/Sections/Listing.php:94
+msgid "Show Full Location"
+msgstr ""
+
+#: ../inc/Api/Customizer/Sections/Listing.php:100
 msgid "Price precision"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Listing.php:90, ../inc/Api/Customizer/Sections/Listing.php:96
+#: ../inc/Api/Customizer/Sections/Listing.php:101, ../inc/Api/Customizer/Sections/Listing.php:107
 msgid "Enter Price precision. Default value is 3. This field will work if you choose short form price."
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Listing.php:95
+#: ../inc/Api/Customizer/Sections/Listing.php:106
 msgid "Terms and Condition URL/Path for Contact Form"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Listing.php:103
+#: ../inc/Api/Customizer/Sections/Listing.php:114
 msgid "Map Position"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Listing.php:106
+#: ../inc/Api/Customizer/Sections/Listing.php:117
 msgid "Side View (Right)"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Listing.php:107
+#: ../inc/Api/Customizer/Sections/Listing.php:118
 msgid "Side View (Left)"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Listing.php:108
+#: ../inc/Api/Customizer/Sections/Listing.php:119
 msgid "Top View"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Listing.php:109
+#: ../inc/Api/Customizer/Sections/Listing.php:120
 msgid "Bottom View"
 msgstr ""
 

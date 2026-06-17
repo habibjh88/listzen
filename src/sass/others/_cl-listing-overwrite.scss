@@ -241,3 +241,7 @@
 .rtcl .rtcl-sl-containers .rtcl-list-group-item:not(:last-of-type) {
     margin-bottom: 0 !important;
 }
+
+.rtcl.rtcl-elementor-widget .location .rtcl-delimiter {
+    margin-right: 0;
+}

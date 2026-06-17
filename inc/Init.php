@@ -53,9 +53,9 @@ final class Init {
 		Plugins\CLToolKits::instance();
 		Modules\TgmConfig::instance();
 		Shortcode\Shortcode::instance();
-
 		if ( is_admin() ) {
-			new Utility\Utility();
+			Admin\LicenseController::instance();
+			Admin\BundlePluginGuard::instance();
 		}
 	}
 
