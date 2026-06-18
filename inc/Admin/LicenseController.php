@@ -83,17 +83,142 @@ class LicenseController {
 
 		$url = admin_url( 'themes.php?page=' . self::MENU_SLUG );
 		?>
-		<div class="notice notice-warning listzen-license-dashboard-notice">
-			<p>
-				<?php
-				printf(
-					/* translators: 1: opening anchor tag, 2: closing anchor tag */
-					esc_html__( 'The Listzen theme license is not activated. %1$sActivate your license%2$s to receive automatic updates and premium support.', 'listzen' ),
-					'<a href="' . esc_url( $url ) . '"><strong>',
-					'</strong></a>'
-				);
-				?>
-			</p>
+		<style>
+			.listzen-license-dashboard-notice{
+				position:relative;
+				padding:0 !important;
+				margin:20px 20px 20px 2px !important;
+				border:0 !important;
+				border-radius:14px !important;
+				background:linear-gradient(135deg,#5433ff 0%,#7b5bff 55%,#9d7bff 100%) !important;
+				box-shadow:0 12px 30px -12px rgba(84,51,255,.45),0 4px 10px -4px rgba(16,24,40,.12) !important;
+				overflow:hidden;
+				color:#fff;
+			}
+			.listzen-license-dashboard-notice::before{
+				content:"";
+				position:absolute;
+				top:-60px;right:-60px;
+				width:220px;height:220px;
+				background:radial-gradient(circle at center,rgba(255,255,255,.18),rgba(255,255,255,0) 70%);
+				pointer-events:none;
+			}
+			.listzen-license-dashboard-notice .listzen-lic-inner{
+				display:flex;
+				align-items:center;
+				gap:22px;
+				padding:22px 26px;
+				flex-wrap:wrap;
+			}
+			.listzen-license-dashboard-notice .listzen-lic-icon{
+				flex:0 0 auto;
+				width:56px;height:56px;
+				display:inline-flex;
+				align-items:center;
+				justify-content:center;
+				background:rgba(255,255,255,.16);
+				border:1px solid rgba(255,255,255,.25);
+				border-radius:14px;
+				color:#fff;
+			}
+			.listzen-license-dashboard-notice .listzen-lic-icon svg{display:block;}
+			.listzen-license-dashboard-notice .listzen-lic-body{
+				flex:1 1 320px;
+				min-width:260px;
+			}
+			.listzen-license-dashboard-notice .listzen-lic-title{
+				margin:0 0 6px;
+				font-size:18px;
+				font-weight:600;
+				line-height:1.3;
+				color:#fff;
+				letter-spacing:-.01em;
+			}
+			.listzen-license-dashboard-notice .listzen-lic-desc{
+				margin:0 0 10px;
+				font-size:13px;
+				line-height:1.55;
+				color:rgba(255,255,255,.88);
+			}
+			.listzen-license-dashboard-notice .listzen-lic-meta{
+				display:flex;
+				flex-wrap:wrap;
+				gap:8px 16px;
+				margin:0;
+				padding:0;
+				list-style:none;
+				font-size:12px;
+				color:rgba(255,255,255,.92);
+			}
+			.listzen-license-dashboard-notice .listzen-lic-meta li{
+				display:inline-flex;
+				align-items:center;
+				gap:6px;
+			}
+			.listzen-license-dashboard-notice .listzen-lic-meta svg{flex:0 0 auto;}
+			.listzen-license-dashboard-notice .listzen-lic-cta{
+				flex:0 0 auto;
+				display:inline-flex;
+				align-items:center;
+				gap:8px;
+				padding:11px 20px;
+				background:#fff;
+				color:#5433ff !important;
+				font-size:13px;
+				font-weight:600;
+				text-decoration:none;
+				border-radius:10px;
+				box-shadow:0 6px 16px -6px rgba(16,24,40,.35);
+				transition:transform .15s ease,box-shadow .15s ease,background-color .15s ease;
+			}
+			.listzen-license-dashboard-notice .listzen-lic-cta:hover,
+			.listzen-license-dashboard-notice .listzen-lic-cta:focus{
+				transform:translateY(-1px);
+				background:#f5f3ff;
+				color:#4326e6 !important;
+				box-shadow:0 10px 22px -8px rgba(16,24,40,.45);
+				outline:none;
+			}
+			.listzen-license-dashboard-notice .listzen-lic-cta svg{transition:transform .15s ease;}
+			.listzen-license-dashboard-notice .listzen-lic-cta:hover svg{transform:translateX(2px);}
+			@media (max-width:782px){
+				.listzen-license-dashboard-notice .listzen-lic-inner{padding:18px 18px;gap:16px;}
+				.listzen-license-dashboard-notice .listzen-lic-cta{width:100%;justify-content:center;}
+			}
+		</style>
+		<div class="notice listzen-license-dashboard-notice">
+			<div class="listzen-lic-inner">
+				<span class="listzen-lic-icon" aria-hidden="true">
+					<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+						<rect x="3" y="11" width="18" height="10" rx="2"></rect>
+						<path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+					</svg>
+				</span>
+				<div class="listzen-lic-body">
+					<h3 class="listzen-lic-title"><?php esc_html_e( 'Activate your Listzen license', 'listzen' ); ?></h3>
+					<p class="listzen-lic-desc">
+						<?php esc_html_e( 'Your Listzen theme is not activated yet. Activate your license to unlock automatic updates, security patches and premium support.', 'listzen' ); ?>
+					</p>
+					<ul class="listzen-lic-meta">
+						<li>
+							<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+							<?php esc_html_e( 'Automatic theme updates', 'listzen' ); ?>
+						</li>
+						<li>
+							<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+							<?php esc_html_e( 'Priority premium support', 'listzen' ); ?>
+						</li>
+						<li>
+							<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+							<?php esc_html_e( 'Security patches', 'listzen' ); ?>
+						</li>
+					</ul>
+				</div>
+				<a class="listzen-lic-cta" href="<?php echo esc_url( $url ); ?>">
+					<?php esc_html_e( 'Activate License', 'listzen' ); ?>
+					<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+				</a>
+			</div>
 		</div>
 		<?php
 	}
