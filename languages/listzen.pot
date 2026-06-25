@@ -6,7 +6,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-06-17 13:10+0000\n"
+"POT-Creation-Date: 2026-06-18 08:46+0000\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -269,151 +269,170 @@ msgstr ""
 msgid "License required to install or activate this bundled plugin."
 msgstr ""
 
-#. translators: 1: opening anchor tag, 2: closing anchor tag
-#: ../inc/Admin/LicenseController.php:91
-msgid "The Listzen theme license is not activated. %1$sActivate your license%2$s to receive automatic updates and premium support."
+#: ../inc/Admin/LicenseController.php:195
+msgid "Activate your Listzen license"
 msgstr ""
 
-#: ../inc/Admin/LicenseController.php:121, ../inc/Admin/LicenseController.php:138, ../inc/Admin/views/license-panel.php:45
+#: ../inc/Admin/LicenseController.php:197
+msgid "Your Listzen theme is not activated yet. Activate your license to unlock automatic updates, security patches and premium support."
+msgstr ""
+
+#: ../inc/Admin/LicenseController.php:202
+msgid "Automatic theme updates"
+msgstr ""
+
+#: ../inc/Admin/LicenseController.php:206
+msgid "Priority premium support"
+msgstr ""
+
+#: ../inc/Admin/LicenseController.php:210
+msgid "Security patches"
+msgstr ""
+
+#: ../inc/Admin/LicenseController.php:215, ../inc/Admin/views/license-panel.php:115
+msgid "Activate License"
+msgstr ""
+
+#: ../inc/Admin/LicenseController.php:243, ../inc/Admin/LicenseController.php:260, ../inc/Admin/views/license-panel.php:45
 msgid "Theme License"
 msgstr ""
 
-#: ../inc/Admin/LicenseController.php:122
+#: ../inc/Admin/LicenseController.php:244
 msgid "License"
 msgstr ""
 
-#: ../inc/Admin/LicenseController.php:184, ../inc/Admin/views/license-panel.php:56
+#: ../inc/Admin/LicenseController.php:306, ../inc/Admin/views/license-panel.php:56
 msgid "Activated"
 msgstr ""
 
-#: ../inc/Admin/LicenseController.php:185, ../inc/Admin/views/license-panel.php:56
+#: ../inc/Admin/LicenseController.php:307, ../inc/Admin/views/license-panel.php:56
 msgid "Not Activated"
 msgstr ""
 
-#: ../inc/Admin/LicenseController.php:186
+#: ../inc/Admin/LicenseController.php:308
 msgid "Activating…"
 msgstr ""
 
-#: ../inc/Admin/LicenseController.php:187
+#: ../inc/Admin/LicenseController.php:309
 msgid "Deactivating…"
 msgstr ""
 
-#: ../inc/Admin/LicenseController.php:188, ../inc/Admin/LicenseController.php:252
+#: ../inc/Admin/LicenseController.php:310, ../inc/Admin/LicenseController.php:374
 msgid "Please enter your license key."
 msgstr ""
 
-#: ../inc/Admin/LicenseController.php:189
+#: ../inc/Admin/LicenseController.php:311
 msgid "Network error. Please try again."
 msgstr ""
 
-#: ../inc/Admin/LicenseController.php:190
+#: ../inc/Admin/LicenseController.php:312
 msgid "Unexpected response. Please try again."
 msgstr ""
 
-#: ../inc/Admin/LicenseController.php:191
+#: ../inc/Admin/LicenseController.php:313
 msgid "Expires:"
 msgstr ""
 
-#: ../inc/Admin/LicenseController.php:192, ../inc/Admin/views/license-panel.php:25
+#: ../inc/Admin/LicenseController.php:314, ../inc/Admin/views/license-panel.php:25
 msgid "Lifetime license"
 msgstr ""
 
-#: ../inc/Admin/LicenseController.php:193
+#: ../inc/Admin/LicenseController.php:315
 msgid "Do you want to deactivate your license from this site?"
 msgstr ""
 
-#: ../inc/Admin/LicenseController.php:236
+#: ../inc/Admin/LicenseController.php:358
 msgid "Invalid action."
 msgstr ""
 
-#: ../inc/Admin/LicenseController.php:290
+#: ../inc/Admin/LicenseController.php:412
 msgid "License successfully activated."
 msgstr ""
 
-#: ../inc/Admin/LicenseController.php:315
+#: ../inc/Admin/LicenseController.php:437
 msgid "License could not be deactivated. Please try again."
 msgstr ""
 
-#: ../inc/Admin/LicenseController.php:327
+#: ../inc/Admin/LicenseController.php:449
 msgid "License successfully deactivated."
 msgstr ""
 
 #. translators: %s: expiration date
-#: ../inc/Admin/LicenseController.php:428
+#: ../inc/Admin/LicenseController.php:550
 msgid "Your license key expired on %s."
 msgstr ""
 
-#: ../inc/Admin/LicenseController.php:431
+#: ../inc/Admin/LicenseController.php:553
 msgid "Your license key has expired."
 msgstr ""
 
-#: ../inc/Admin/LicenseController.php:434
+#: ../inc/Admin/LicenseController.php:556
 msgid "Your license key has been disabled."
 msgstr ""
 
-#: ../inc/Admin/LicenseController.php:436
+#: ../inc/Admin/LicenseController.php:558
 msgid "Invalid license. Please double-check your key."
 msgstr ""
 
-#: ../inc/Admin/LicenseController.php:439
+#: ../inc/Admin/LicenseController.php:561
 msgid "Your license is not active for this URL."
 msgstr ""
 
 #. translators: %s: product name
-#: ../inc/Admin/LicenseController.php:443
+#: ../inc/Admin/LicenseController.php:565
 msgid "This appears to be an invalid license key for %s."
 msgstr ""
 
 #. translators: 1: number of sites already activated, 2: total activation limit
-#: ../inc/Admin/LicenseController.php:452
+#: ../inc/Admin/LicenseController.php:574
 msgid "Your license key has reached its activation limit (%1$d of %2$d sites used). Please deactivate the license on a site you no longer use, or upgrade your license to add more sites."
 msgstr ""
 
-#: ../inc/Admin/LicenseController.php:457
+#: ../inc/Admin/LicenseController.php:579
 msgid "Your license key has reached its activation limit. Please deactivate the license on a site you no longer use, or upgrade your license to add more sites."
 msgstr ""
 
-#: ../inc/Admin/LicenseController.php:459, ../inc/Admin/LicenseController.php:616
+#: ../inc/Admin/LicenseController.php:581, ../inc/Admin/LicenseController.php:738
 msgid "An error occurred, please try again."
 msgstr ""
 
-#: ../inc/Admin/LicenseController.php:475
+#: ../inc/Admin/LicenseController.php:597
 msgid "Lifetime"
 msgstr ""
 
-#: ../inc/Admin/LicenseController.php:493
+#: ../inc/Admin/LicenseController.php:615
 msgid "Session expired. Please refresh the page and try again."
 msgstr ""
 
-#: ../inc/Admin/LicenseController.php:503
+#: ../inc/Admin/LicenseController.php:625
 msgid "You do not have permission to manage the license."
 msgstr ""
 
 #. translators: %d: HTTP status code
-#: ../inc/Admin/LicenseController.php:549
+#: ../inc/Admin/LicenseController.php:671
 msgid "Licensing server returned an unexpected status (HTTP %d). Please try again in a few minutes."
 msgstr ""
 
-#: ../inc/Admin/LicenseController.php:560
+#: ../inc/Admin/LicenseController.php:682
 msgid "Unexpected response from the licensing server. Please try again."
 msgstr ""
 
 #. translators: %s: licensing server hostname
-#: ../inc/Admin/LicenseController.php:591
+#: ../inc/Admin/LicenseController.php:713
 msgid "Outbound connections to %s are being blocked by your server or a security plugin. Please ask your host (or check WP_HTTP_BLOCK_EXTERNAL / WP_ACCESSIBLE_HOSTS in wp-config.php) to allow requests to this host, then try again."
 msgstr ""
 
 #. translators: %s: licensing server hostname
-#: ../inc/Admin/LicenseController.php:599
+#: ../inc/Admin/LicenseController.php:721
 msgid "The licensing server (%s) did not respond in time. Please check your internet connection and try again."
 msgstr ""
 
 #. translators: %s: licensing server hostname
-#: ../inc/Admin/LicenseController.php:607
+#: ../inc/Admin/LicenseController.php:729
 msgid "Could not resolve %s. Please check your server's DNS configuration and try again."
 msgstr ""
 
-#: ../inc/Admin/LicenseController.php:613
+#: ../inc/Admin/LicenseController.php:735
 msgid "A secure connection to the licensing server could not be established. Please ensure your server's CA bundle is up to date."
 msgstr ""
 
@@ -1430,10 +1449,6 @@ msgstr ""
 #. translators: %s: account URL
 #: ../inc/Admin/views/license-panel.php:92
 msgid "Your license key can be found in your <a href=\"%s\" target=\"_blank\" rel=\"noopener\">account dashboard</a> after purchase."
-msgstr ""
-
-#: ../inc/Admin/views/license-panel.php:115
-msgid "Activate License"
 msgstr ""
 
 #: ../inc/Admin/views/license-panel.php:125

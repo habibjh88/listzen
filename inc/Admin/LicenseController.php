@@ -69,9 +69,6 @@ class LicenseController {
 	 */
 	public function dashboard_license_notice() {
 		$screen = function_exists( 'get_current_screen' ) ? get_current_screen() : null;
-		if ( ! $screen || 'dashboard' !== $screen->id ) {
-			return;
-		}
 
 		if ( ! current_user_can( 'manage_options' ) ) {
 			return;
@@ -433,6 +430,24 @@ class LicenseController {
 		$license_data = $result['data'];
 
 		if ( isset( $license_data->license ) && 'failed' === $license_data->license ) {
+			// EDD Software Licensing does not store removable activations for
+			// local/dev/staging URLs, so deactivate_license always returns
+			// "failed" for them even though activation succeeded. In that case
+			// no activation slot was ever consumed, so just clear the cached
+			// status locally instead of leaving the panel stuck as "Activated".
+			if ( $this->is_local_url() ) {
+				unset( $data['license_status'], $data['license_expires'] );
+				$this->update_license_data( $data );
+
+				wp_send_json(
+					[
+						'error'  => false,
+						'status' => 'invalid',
+						'msg'    => esc_html__( 'License removed from this site. Local, dev and staging sites are not tracked by the licensing server, so no activation slot was used.', 'listzen' ),
+					]
+				);
+			}
+
 			wp_send_json(
 				[
 					'error'  => true,
@@ -496,6 +511,48 @@ class LicenseController {
 		$data = $this->get_license_data();
 
 		return ! empty( $data['license_status'] ) && 'valid' === $data['license_status'];
+	}
+
+	/**
+	 * Detect whether the current site is a local / dev / staging URL.
+	 *
+	 * EDD Software Licensing does not register removable activations for
+	 * these URLs, so deactivate_license returns "failed" for them. We mirror
+	 * that detection here so the license panel can be cleared locally.
+	 *
+	 * @return bool
+	 */
+	private function is_local_url() {
+		$host = wp_parse_url( home_url(), PHP_URL_HOST );
+		if ( ! $host ) {
+			return false;
+		}
+		$host = strtolower( $host );
+
+		if ( in_array( $host, [ 'localhost', '127.0.0.1', '::1' ], true ) ) {
+			return true;
+		}
+
+		// Bare IP addresses are treated as local.
+		if ( filter_var( $host, FILTER_VALIDATE_IP ) ) {
+			return true;
+		}
+
+		$local_tlds = [ '.local', '.test', '.localhost', '.dev', '.example', '.invalid' ];
+		foreach ( $local_tlds as $tld ) {
+			if ( substr( $host, - strlen( $tld ) ) === $tld ) {
+				return true;
+			}
+		}
+
+		$local_prefixes = [ 'dev.', 'staging.', 'stage.', 'test.', 'local.' ];
+		foreach ( $local_prefixes as $prefix ) {
+			if ( 0 === strpos( $host, $prefix ) ) {
+				return true;
+			}
+		}
+
+		return false;
 	}
 
 	/**

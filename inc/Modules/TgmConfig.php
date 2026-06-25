@@ -35,7 +35,7 @@ class TgmConfig {
 				'slug'     => 'listzen-core',
 				'source'   => 'listzen-core.zip',
 				'required' => true,
-				'version'  => '1.0.1'
+				'version'  => '1.0.2'
 			],
 			[
 				'name'     => esc_html__( 'Elementor Page Builder', 'listzen' ),
